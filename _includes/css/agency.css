@@ -656,14 +656,14 @@ aside.clients img {
     margin: 50px auto;
 }
 
-section#contact {
+section#join {
     background-color: #222;
     background-image: url('{{ site.baseurl }}/img/map-image.png');
     background-position: center;
     background-repeat: no-repeat;
 }
 
-section#contact .section-heading {
+section#join .section-heading {
     color: #fff;
 }
 
