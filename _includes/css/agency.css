@@ -652,7 +652,7 @@ section h3.section-subheading {
     margin-top: 0;
 }
 
-aside.clients img {
+aside.partners img {
     margin: 50px auto;
 }
 
@@ -665,6 +665,10 @@ section#join {
 
 section#join .section-heading {
     color: #fff;
+}
+
+section#join .container{
+    text-align: center;
 }
 
 section#contact .form-group {
