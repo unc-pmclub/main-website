@@ -9,52 +9,60 @@ description: "Write an awesome description for your new site here. You can edit 
 
 # Team names, titles and social links
 people:
-- name: Kay Garland
+- name: Yujie Tao
   pic: 1
-  position: Lead Designer
+  position: Operations
   social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: stack-overflow
-      url: #
+    - title: linkedin
+      url: https://www.linkedin.com/in/yujie-tao/
 
-- name: Larry Parker
+- name: Kushagra Chopra
   pic: 2
-  position: Lead Marketer
+  position: Events
   social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
+    - title: linkedin
+      url: https://www.linkedin.com/in/kushagra-chopra16/
+
+- name: Sunny Deshwal
+  pic: 3
+  position: External Relations 
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/sunnydeshwal/
+
+- name: Katherine Wilkins
+  pic: 4
+  position: Marketing 
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/mingxuan-shen-abb49b171/
+
+- name: Angie Shen
+  pic: 5
+  position: Graphic Design
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/mingxuan-shen-abb49b171/
+
+- name: Jojo Yang
+  pic: 3
+  position: Graphic Design
+  social:
     - title: linkedin
       url: #
-
-- name: Diana Petersen
-  pic: 3
-  position: Lead Developer
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: google-plus
-      url: #
-
 
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
+  - title: linkedin
+    url: https://www.linkedin.com/company/unc-product-management-club/
   - title: facebook
-    url:
+    url: 
   - title: github
-    url: http://github.com/jekyll
+    url: https://github.com/unc-pmclub
+
 
 # Postal address (add as many lines as necessary)
-address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
 
 # Build settings
 markdown: kramdown
