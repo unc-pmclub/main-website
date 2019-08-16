@@ -269,7 +269,9 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url('{{ site.baseurl }}/img/header-bg2.jpg');
+    background-color: #222;
+    /*background-image: url('{{ site.baseurl }}/img/header-bg2.jpg');*/
+  /*  background-color: {{ site.data.template.color.secondary }};*/
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -654,6 +656,10 @@ section h3.section-subheading {
 
 aside.partners img {
     margin: 50px auto;
+}
+
+.subheading.special{
+    margin-top: 50px;
 }
 
 section#join {
