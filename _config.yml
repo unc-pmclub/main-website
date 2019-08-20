@@ -1,5 +1,7 @@
-# url: https://yujietao.me
-# baseurl: /pmclub/
+url: https://yujietao.me
+baseurl: /pmclub/
+
+
 
 # Site settings
 title: UNC Product Management Club
@@ -35,7 +37,7 @@ people:
   position: Marketing 
   social:
     - title: linkedin
-      url: https://www.linkedin.com/in/mingxuan-shen-abb49b171/
+      url: https://www.linkedin.com/in/katherine-wilkins-3b7b73190/
 
 - name: Angie Shen
   pic: 5
@@ -57,7 +59,7 @@ social:
   - title: linkedin
     url: https://www.linkedin.com/company/unc-product-management-club/
   - title: facebook
-    url: 
+    url: https://www.facebook.com/UNCProductManagementClub/
   - title: github
     url: https://github.com/unc-pmclub
 

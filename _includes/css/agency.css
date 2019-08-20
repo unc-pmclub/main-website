@@ -270,7 +270,7 @@ header {
     color: #fff;
     background-attachment: scroll;
     background-color: #222;
-    /*background-image: url('{{ site.baseurl }}/img/header-bg2.jpg');*/
+    background-image: url('{{ site.baseurl }}/img/map-image.png');
   /*  background-color: {{ site.data.template.color.secondary }};*/
     background-position: center center;
     background-repeat: none;
@@ -664,7 +664,7 @@ aside.partners img {
 
 section#join {
     background-color: #222;
-    background-image: url('{{ site.baseurl }}/img/map-image.png');
+/*    background-image: url('{{ site.baseurl }}/img/map-image.png');*/
     background-position: center;
     background-repeat: no-repeat;
 }
