@@ -4,6 +4,7 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+
 body {
     overflow-x: hidden;
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -878,4 +879,10 @@ body {
 
 .in-schedule{
     color: #{{ site.data.template.color.primary }};
+}
+
+@media only screen and (max-width: 375px) {
+    html{
+        width: 110%;
+    }
 }

@@ -1,12 +1,12 @@
-url: https://yujietao.me
-baseurl: /pmclub
+url: https://uncpmclub.com
+baseurl: 
 
 
 
 # Site settings
 title: UNC Product Management Club
 email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+description: "UNC PM Club aims to introduce product management disciplines to more undergraduate students. We connect students who are passionate about product and empower them to develop not only technical knowledge, but also that of the business and design-side of the world through a series of workshops, invited talks, and product sprints."
 
 
 # Team names, titles and social links
