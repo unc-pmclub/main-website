@@ -271,7 +271,7 @@ header {
     color: #fff;
     background-attachment: scroll;
     background-color: #222;
-    background-image: url('{{ site.baseurl }}/img/map-image.png');
+    background-image: url('{{ site.baseurl }}/img/product-management-marketing-books.jpg');
   /*  background-color: {{ site.data.template.color.secondary }};*/
     background-position: center center;
     background-repeat: none;
