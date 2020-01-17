@@ -342,7 +342,7 @@ section h3.section-subheading {
     text-transform: none;
     font-family: {{ site.data.template.font.secondary }};
     font-size: 16px;
-    /* font-style: italic; */
+    
     font-weight: 400;
 }
 
