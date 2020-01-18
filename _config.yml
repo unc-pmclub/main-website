@@ -38,6 +38,13 @@ people:
   social:
     - title: linkedin
       url: https://www.linkedin.com/in/maddieewell/
+      
+- name: Tanay Singhal
+  pic: 8
+  position: Events 
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/tanaysinghal/
 
 - name: Angie Shen
   pic: 5
