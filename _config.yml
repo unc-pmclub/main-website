@@ -45,6 +45,13 @@ people:
   social:
     - title: linkedin
       url: https://www.linkedin.com/in/tanaysinghal/
+      
+ - name: Ayana Monroe
+  pic: 9
+  position: Committee Member 
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/ayana-monroe-958a47172/
 
 - name: Angie Shen
   pic: 5
