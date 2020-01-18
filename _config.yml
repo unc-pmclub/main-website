@@ -13,14 +13,14 @@ description: "UNC PM Club aims to introduce product management disciplines to mo
 people:
 - name: Yujie Tao
   pic: 1
-  position: Operations
+  position: Founder
   social:
     - title: linkedin
       url: https://www.linkedin.com/in/yujie-tao/
 
 - name: Kushagra Chopra
   pic: 2
-  position: Events
+  position: Operations
   social:
     - title: linkedin
       url: https://www.linkedin.com/in/kushagra-chopra16/
@@ -32,12 +32,12 @@ people:
     - title: linkedin
       url: https://www.linkedin.com/in/sunnydeshwal/
 
-- name: Katherine Wilkins
-  pic: 4
+- name: Maddie Ewell
+  pic: 7
   position: Marketing 
   social:
     - title: linkedin
-      url: https://www.linkedin.com/in/katherine-wilkins-3b7b73190/
+      url: https://www.linkedin.com/in/maddieewell/
 
 - name: Angie Shen
   pic: 5
