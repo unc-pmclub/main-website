@@ -901,6 +901,7 @@ body {
   max-height: 700px;
     
   border-radius: 10px;
+  padding: 10px;
 }
 
 /* On mouse-over, add a deeper shadow */
