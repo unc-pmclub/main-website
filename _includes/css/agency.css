@@ -891,7 +891,7 @@ body {
 
 .card {
   /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 10px 20px 10px 0 rgba(0,0,0,0.3);
   transition: 0.3s;
   
   background-color: #5d55fa;
@@ -908,7 +908,7 @@ body {
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 15px 25px 10px 0 rgba(0,0,0,0.3);
 }
 
 /* Add some padding inside the card container */
