@@ -11,58 +11,58 @@ description: "UNC PM Club aims to introduce product management disciplines to mo
 
 # Team names, titles and social links
 people:
-- name: Yujie Tao
-  pic: 1
-  position: Founder
-  social:
-    - title: linkedin
-      url: https://www.linkedin.com/in/yujie-tao/
+#- name: Yujie Tao
+#  pic: 1
+#  position: Founder
+#  social:
+#    - title: linkedin
+#      url: https://www.linkedin.com/in/yujie-tao/
 
 - name: Kushagra Chopra
   pic: 2
-  position: Operations
+  position: President
   social:
     - title: linkedin
       url: https://www.linkedin.com/in/kushagra-chopra16/
 
 - name: Sunny Deshwal
   pic: 3
-  position: External Relations 
+  position: VP of External Relations 
   social:
     - title: linkedin
       url: https://www.linkedin.com/in/sunnydeshwal/
 
 - name: Maddie Ewell
   pic: 7
-  position: Marketing 
+  position: VP of Marketing 
   social:
     - title: linkedin
       url: https://www.linkedin.com/in/maddieewell/
       
 - name: Tanay Singhal
   pic: 8
-  position: Events 
+  position: VP of Events 
   social:
     - title: linkedin
       url: https://www.linkedin.com/in/tanaysinghal/
       
 - name: Ayana Monroe
   pic: 9
-  position: Committee Member 
+  position: Marketing Committee Member 
   social:
     - title: linkedin
       url: https://www.linkedin.com/in/ayana-monroe-958a47172/
 
-- name: Angie Shen
-  pic: 5
-  position: Graphic Design
-  social:
-    - title: linkedin
-      url: https://www.linkedin.com/in/mingxuan-shen-abb49b171/
+#- name: Angie Shen
+#  pic: 5
+#  position: Graphic Design
+#  social:
+#    - title: linkedin
+#      url: https://www.linkedin.com/in/mingxuan-shen-abb49b171/
 
 - name: Jojo Yang
   pic: 6
-  position: Graphic Design
+  position: Graphic Designer
   social:
     - title: linkedin
       url: https://www.linkedin.com/in/jojo-yang-11573a162/
