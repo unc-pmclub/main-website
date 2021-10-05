@@ -75,6 +75,48 @@ people:
   social:
     - title: linkedin
       url: https://www.linkedin.com/in/jrdewey 
+      
+- name: Jordan Cabrol
+  pic: 12
+  position: Project Manager 
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/jordan-cabrol-4218a2146/
+      
+- name: Austin Wade
+  pic: 13
+  position: Project Manager 
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/austinfwade/
+      
+- name: Caroline Felman
+  pic: 14
+  position: Project Manager 
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/caroline-felman/
+      
+- name: Kodjoga Bello
+  pic: 15
+  position: Project Manager 
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/kodjoga-bello-77h/
+      
+- name: Julianna Surkin
+  pic: 16
+  position: Project Manager 
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/julianna-surkin/
+      
+- name: Mira Rajesh
+  pic: 17
+  position: Project Manager 
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/mira-rajesh/
 
 - name: Jojo Yang
   pic: 6
