@@ -34,12 +34,12 @@ people:
     - title: linkedin
       url: https://www.linkedin.com/in/sunnydeshwal/
 
-- name: Maddie Ewell
-  pic: 7
-  position: VP of Marketing 
-  social:
-    - title: linkedin
-      url: https://www.linkedin.com/in/maddieewell/
+# - name: Maddie Ewell
+#   pic: 7
+#   position: VP of Marketing 
+#   social:
+#     - title: linkedin
+#       url: https://www.linkedin.com/in/maddieewell/
       
 - name: Tanay Singhal
   pic: 8
@@ -50,7 +50,7 @@ people:
       
 - name: Ayana Monroe
   pic: 9
-  position: Marketing Committee Member 
+  position: VP of Marketing 
   social:
     - title: linkedin
       url: https://www.linkedin.com/in/ayana-monroe-958a47172/
@@ -61,6 +61,20 @@ people:
 #  social:
 #    - title: linkedin
 #      url: https://www.linkedin.com/in/mingxuan-shen-abb49b171/
+
+- name: Peter Jackson
+  pic: 10
+  position: Director of Product Management Lab 
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/peter-h-jackson
+ 
+- name: Jack Dewey
+  pic: 11
+  position: External Relations Committee Member 
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/jrdewey 
 
 - name: Jojo Yang
   pic: 6
