@@ -173,7 +173,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default {
     border-color: transparent;
-    background-color: #222;
+    background-color: rgba(36, 2, 0, 0.4);
 }
 
 .navbar-default .navbar-brand {
@@ -258,7 +258,7 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-default.navbar-shrink {
         padding: 10px 0;
-        background-color: #222;
+        background-color: rgba(36, 2, 0, 0.4);
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
@@ -271,7 +271,7 @@ header {
     color: #fff;
     background-attachment: scroll;
     background-color: #222;
-    background-image: url('{{ site.baseurl }}/img/map-image.png');
+    background-image: url('{{ site.baseurl }}/img/product-management-marketing-books.jpg');
   /*  background-color: {{ site.data.template.color.secondary }};*/
     background-position: center center;
     background-repeat: none;
@@ -342,7 +342,7 @@ section h3.section-subheading {
     text-transform: none;
     font-family: {{ site.data.template.font.secondary }};
     font-size: 16px;
-    font-style: italic;
+    
     font-weight: 400;
 }
 
@@ -602,7 +602,7 @@ section h3.section-subheading {
 
     .timeline>li .timeline-image h4 {
         margin-top: 30px;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 26px;
     }
 
@@ -886,3 +886,33 @@ body {
         width: 110%;
     }
 }
+
+/*The profile cards in the "corperate_partner" section*/
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 10px 20px 10px 0 rgba(0,0,0,0.3);
+  transition: 0.3s;
+  
+  background-color: #5d55fa;
+  color: #ffffff;
+  
+  max-width: 300px;
+  max-height: 700px;
+    
+  border-radius: 10px;
+  padding: 10px;
+    
+  margin:10px auto;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 15px 25px 10px 0 rgba(0,0,0,0.3);
+}
+
+/* Add some padding inside the card container */
+.partner_description {
+  padding: 2px 16px;
+}
+

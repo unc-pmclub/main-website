@@ -6,49 +6,121 @@ baseurl:
 # Site settings
 title: UNC Product Management Club
 email: your-email@domain.com
-description: "UNC PM Club aims to introduce product management disciplines to more undergraduate students. We connect students who are passionate about product and empower them to develop not only technical knowledge, but also that of the business and design-side of the world through a series of workshops, invited talks, and product sprints."
+description: "UNC Product Management Club partners with local tech startups and develops features for their products over the course of the semester. We provide
+undergaraduate students interested in computer science, entreprenurship, business, UX, etc with hands on experience developing valuable products. We provide 
+tech startups with fresh ideas on their products."
 
 
 # Team names, titles and social links
 people:
-- name: Yujie Tao
-  pic: 1
-  position: Operations
-  social:
-    - title: linkedin
-      url: https://www.linkedin.com/in/yujie-tao/
+#- name: Yujie Tao
+#  pic: 1
+#  position: Founder
+#  social:
+#    - title: linkedin
+#      url: https://www.linkedin.com/in/yujie-tao/
 
 - name: Kushagra Chopra
   pic: 2
-  position: Events
+  position: President
   social:
     - title: linkedin
       url: https://www.linkedin.com/in/kushagra-chopra16/
 
 - name: Sunny Deshwal
   pic: 3
-  position: External Relations 
+  position: VP of External Relations 
   social:
     - title: linkedin
       url: https://www.linkedin.com/in/sunnydeshwal/
 
-- name: Katherine Wilkins
-  pic: 4
-  position: Marketing 
+# - name: Maddie Ewell
+#   pic: 7
+#   position: VP of Marketing 
+#   social:
+#     - title: linkedin
+#       url: https://www.linkedin.com/in/maddieewell/
+      
+- name: Tanay Singhal
+  pic: 8
+  position: VP of Events 
   social:
     - title: linkedin
-      url: https://www.linkedin.com/in/katherine-wilkins-3b7b73190/
+      url: https://www.linkedin.com/in/tanaysinghal/
+      
+- name: Ayana Monroe
+  pic: 9
+  position: VP of Marketing 
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/ayana-monroe-958a47172/
 
-- name: Angie Shen
-  pic: 5
-  position: Graphic Design
+#- name: Angie Shen
+#  pic: 5
+#  position: Graphic Design
+#  social:
+#    - title: linkedin
+#      url: https://www.linkedin.com/in/mingxuan-shen-abb49b171/
+
+- name: Peter Jackson
+  pic: 10
+  position: Director of Product Management Lab 
   social:
     - title: linkedin
-      url: https://www.linkedin.com/in/mingxuan-shen-abb49b171/
+      url: https://www.linkedin.com/in/peter-h-jackson
+ 
+- name: Jack Dewey
+  pic: 11
+  position: External Relations Committee Member 
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/jrdewey 
+      
+- name: Jordan Cabrol
+  pic: 12
+  position: Project Manager 
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/jordan-cabrol-4218a2146/
+      
+- name: Austin Wade
+  pic: 13
+  position: Project Manager 
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/austinfwade/
+      
+- name: Caroline Felman
+  pic: 14
+  position: Project Manager 
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/caroline-felman/
+      
+- name: Kodjoga Bello
+  pic: 15
+  position: Project Manager 
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/kodjoga-bello-77h/
+      
+- name: Julianna Surkin
+  pic: 16
+  position: Project Manager 
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/julianna-surkin/
+      
+- name: Mira Rajesh
+  pic: 17
+  position: Project Manager 
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/mira-rajesh/
 
 - name: Jojo Yang
   pic: 6
-  position: Graphic Design
+  position: Graphic Designer
   social:
     - title: linkedin
       url: https://www.linkedin.com/in/jojo-yang-11573a162/
@@ -56,6 +128,8 @@ people:
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
+  - title: instagram
+    url: https://www.instagram.com/UNC_PMClub/
   - title: linkedin
     url: https://www.linkedin.com/company/unc-product-management-club/
   - title: facebook
