@@ -1,3 +1,8 @@
+# NOTE: Change headshots, 
+#       follow up on inclusion of project managers, and
+#       Update LinkedIn links
+
+
 url: https://uncpmclub.com
 baseurl: 
 
@@ -20,19 +25,19 @@ people:
 #    - title: linkedin
 #      url: https://www.linkedin.com/in/yujie-tao/
 
-- name: Kushagra Chopra
-  pic: 2
+- name: Peter Jackson
+  pic: 10
   position: President
   social:
     - title: linkedin
-      url: https://www.linkedin.com/in/kushagra-chopra16/
+      url: https://www.linkedin.com/in/peter-h-jackson/
 
-- name: Sunny Deshwal
-  pic: 3
+- name: Rohan Venkatraman
+  pic: 18
   position: VP of External Relations 
   social:
     - title: linkedin
-      url: https://www.linkedin.com/in/sunnydeshwal/
+      url: https://www.linkedin.com/in/rohan-venkatraman/
 
 # - name: Maddie Ewell
 #   pic: 7
@@ -41,12 +46,12 @@ people:
 #     - title: linkedin
 #       url: https://www.linkedin.com/in/maddieewell/
       
-- name: Tanay Singhal
-  pic: 8
+- name: Caroline Felman
+  pic: 14
   position: VP of Events 
   social:
     - title: linkedin
-      url: https://www.linkedin.com/in/tanaysinghal/
+      url: https://www.linkedin.com/in/caroline-felman/
       
 - name: Ayana Monroe
   pic: 9
@@ -62,68 +67,68 @@ people:
 #    - title: linkedin
 #      url: https://www.linkedin.com/in/mingxuan-shen-abb49b171/
 
-- name: Peter Jackson
-  pic: 10
+- name: Noah Davis
+  pic: 19
   position: Director of Product Management Lab 
   social:
     - title: linkedin
-      url: https://www.linkedin.com/in/peter-h-jackson
+      url: https://www.linkedin.com/in/noahidavis/
  
-- name: Jack Dewey
-  pic: 11
-  position: External Relations Committee Member 
-  social:
-    - title: linkedin
-      url: https://www.linkedin.com/in/jrdewey 
+# - name: Jack Dewey
+#   pic: 11
+#   position: External Relations Committee Member 
+#   social:
+#     - title: linkedin
+#       url: https://www.linkedin.com/in/jrdewey 
       
-- name: Jordan Cabrol
-  pic: 12
-  position: Project Manager 
-  social:
-    - title: linkedin
-      url: https://www.linkedin.com/in/jordan-cabrol-4218a2146/
+# - name: Jordan Cabrol
+#   pic: 12
+#   position: Project Manager 
+#   social:
+#     - title: linkedin
+#       url: https://www.linkedin.com/in/jordan-cabrol-4218a2146/
       
-- name: Austin Wade
-  pic: 13
-  position: Project Manager 
-  social:
-    - title: linkedin
-      url: https://www.linkedin.com/in/austinfwade/
+# - name: Austin Wade
+#   pic: 13
+#   position: Project Manager 
+#   social:
+#     - title: linkedin
+#       url: https://www.linkedin.com/in/austinfwade/
       
-- name: Caroline Felman
-  pic: 14
-  position: Project Manager 
-  social:
-    - title: linkedin
-      url: https://www.linkedin.com/in/caroline-felman/
+# - name: Caroline Felman
+#   pic: 14
+#   position: Project Manager 
+#   social:
+#     - title: linkedin
+#       url: https://www.linkedin.com/in/caroline-felman/
       
-- name: Kodjoga Bello
-  pic: 15
-  position: Project Manager 
-  social:
-    - title: linkedin
-      url: https://www.linkedin.com/in/kodjoga-bello-77h/
+# - name: Kodjoga Bello
+#   pic: 15
+#   position: Project Manager 
+#   social:
+#     - title: linkedin
+#       url: https://www.linkedin.com/in/kodjoga-bello-77h/
       
-- name: Julianna Surkin
-  pic: 16
-  position: Project Manager 
-  social:
-    - title: linkedin
-      url: https://www.linkedin.com/in/julianna-surkin/
+# - name: Julianna Surkin
+#   pic: 16
+#   position: Project Manager 
+#   social:
+#     - title: linkedin
+#       url: https://www.linkedin.com/in/julianna-surkin/
       
-- name: Mira Rajesh
-  pic: 17
-  position: Project Manager 
-  social:
-    - title: linkedin
-      url: https://www.linkedin.com/in/mira-rajesh/
+# - name: Mira Rajesh
+#   pic: 17
+#   position: Project Manager 
+#   social:
+#     - title: linkedin
+#       url: https://www.linkedin.com/in/mira-rajesh/
 
-- name: Jojo Yang
-  pic: 6
-  position: Graphic Designer
-  social:
-    - title: linkedin
-      url: https://www.linkedin.com/in/jojo-yang-11573a162/
+# - name: Jojo Yang
+#   pic: 6
+#   position: Graphic Designer
+#   social:
+#     - title: linkedin
+#       url: https://www.linkedin.com/in/jojo-yang-11573a162/
 
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
