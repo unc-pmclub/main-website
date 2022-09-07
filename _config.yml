@@ -52,13 +52,13 @@ people:
   social:
     - title: linkedin
       url: https://www.linkedin.com/in/caroline-felman/
-      
-# - name: Ayana Monroe
-#   pic: 9
-#   position: VP of Marketing 
-#   social:
-#     - title: linkedin
-#       url: https://www.linkedin.com/in/ayana-monroe-958a47172/
+
+- name: Austin Wade
+  pic: 13
+  position: VP of Marketing
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/austinfwade/
 
 #- name: Angie Shen
 #  pic: 5
@@ -88,12 +88,12 @@ people:
 #     - title: linkedin
 #       url: https://www.linkedin.com/in/jordan-cabrol-4218a2146/
       
-- name: Austin Wade
-  pic: 13
-  position: VP of Marketing
-  social:
-    - title: linkedin
-      url: https://www.linkedin.com/in/austinfwade/
+# - name: Ayana Monroe
+#   pic: 9
+#   position: VP of Marketing 
+#   social:
+#     - title: linkedin
+#       url: https://www.linkedin.com/in/ayana-monroe-958a47172/
       
 # - name: Caroline Felman
 #   pic: 14
