@@ -25,12 +25,12 @@ people:
 #    - title: linkedin
 #      url: https://www.linkedin.com/in/yujie-tao/
 
-- name: Peter Jackson
-  pic: 10
+- name: Noah Davis
+  pic: 17
   position: President
   social:
     - title: linkedin
-      url: https://www.linkedin.com/in/peter-h-jackson/
+      url: https://www.linkedin.com/in/noahidavis/
 
 - name: Rohan Venkatraman
   pic: 16
@@ -46,19 +46,19 @@ people:
 #     - title: linkedin
 #       url: https://www.linkedin.com/in/maddieewell/
       
-- name: Caroline Felman
-  pic: 14
+- name: Ryan Richardson
+  pic: 20
   position: VP of Events 
   social:
     - title: linkedin
-      url: https://www.linkedin.com/in/caroline-felman/
+      url: https://www.linkedin.com/in/ryan-s-richardson/
 
-- name: Austin Wade
-  pic: 13
+- name: Bernie Chen
+  pic: 19
   position: VP of Marketing
   social:
     - title: linkedin
-      url: https://www.linkedin.com/in/austinfwade/
+      url: https://www.linkedin.com/in/berniechen/
 
 #- name: Angie Shen
 #  pic: 5
@@ -67,12 +67,12 @@ people:
 #    - title: linkedin
 #      url: https://www.linkedin.com/in/mingxuan-shen-abb49b171/
 
-- name: Noah Davis
-  pic: 17
+- name: Cade Viney
+  pic: 18
   position: Director of Product Management Lab 
   social:
     - title: linkedin
-      url: https://www.linkedin.com/in/noahidavis/
+      url: https://www.linkedin.com/in/cade-viney/
  
 # - name: Jack Dewey
 #   pic: 11
