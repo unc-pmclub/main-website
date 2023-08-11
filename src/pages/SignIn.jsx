@@ -55,7 +55,7 @@ function SignIn() {
                           Password
                         </label>
                         <Link
-                          to="/reset-password"
+                          to="/uncpm-dev-website/reset-password"
                           className="text-sm font-medium text-blue-600 hover:underline"
                         >
                           Having trouble signing in?

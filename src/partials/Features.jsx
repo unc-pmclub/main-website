@@ -1,15 +1,24 @@
 // TODO:
-// - Add other PM Lab pictures to create "carousel"
+// - Implement Carousel component and style accordingly
 
 import React, { useState, useRef, useEffect } from "react";
 import Transition from "../utils/Transition";
+import Carousel from "./Carousel";
 
 import Demo from "../images/demo event.jpeg";
+import DemoSP23 from "../images/demo-event-sp23.jpg";
+import DemoFA221 from "../images/demo-event-fa22-1.jpg";
+import DemoFA222 from "../images/demo-event-fa22-2.jpg";
+import DemoFA223 from "../images/demo-event-fa22-3.jpg";
 import Step1 from "../images/step1.jpg";
 import Step2 from "../images/step2.jpg";
 import Step3 from "../images/step3.jpg";
 import Step4 from "../images/step4.jpeg";
 import Step5 from "../images/step5.jpeg";
+
+const stepImages = [Step1, Step2, Step3, Step4, Step5];
+
+const demoImages = [Demo, DemoSP23, DemoFA221, DemoFA222, DemoFA223];
 
 function Features() {
   const [tab, setTab] = useState(1);
@@ -343,15 +352,7 @@ function Features() {
                   leaveStart="opacity-100 translate-y-0"
                   leaveEnd="opacity-0 -translate-y-16"
                 >
-                  <div className="relative inline-flex flex-col">
-                    <img
-                      className="md:max-w-none mx-auto rounded"
-                      src={Demo}
-                      width="500"
-                      height="462"
-                      alt="Features bg"
-                    />
-                  </div>
+                  <Carousel images={demoImages}></Carousel>
                 </Transition>
               </div>
             </div>

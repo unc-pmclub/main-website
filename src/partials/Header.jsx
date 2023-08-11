@@ -2,7 +2,7 @@
 //  - Fix deprecated pageYOffset usage on line 15
 
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../images/pmlogo.png";
 import BasicModal from "./Modal";
 
@@ -11,6 +11,20 @@ function Header() {
   // Remember to assign a link to application
   const [application, setApplication] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
+  const location = useLocation();
+
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+
+    if (
+      location.pathname === "/" ||
+      location.pathname === "/uncpm-dev-website/"
+    ) {
+      window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to top if on homepage
+    } else {
+      window.location.href = "/uncpm-dev-website/"; // Navigate to homepage if on other pages
+    }
+  };
 
   const showApplicationMessage = (e) => {
     if (!application) {
@@ -39,7 +53,12 @@ function Header() {
           {/* Site branding */}
           <div className="flex-shrink-0 mr-4">
             {/* Logo */}
-            <a href="#" className="block" aria-label="UNC Product Management">
+            <a
+              href="/uncpm-dev-website/"
+              onClick={handleLogoClick}
+              className="block"
+              aria-label="UNC Product Management"
+            >
               <img className="w-12 h-12" src={Logo}></img>
             </a>
           </div>
