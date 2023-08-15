@@ -1,5 +1,8 @@
 // Modified Image Carousel Component
 // Link to Article being referenced: https://www.freecodecamp.org/news/build-an-image-carousel-with-react-and-framer-motion/
+// TODO:
+//  - Size down images
+//  - Apply border radius to images
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -60,7 +63,7 @@ function Carousel({ images }) {
   };
 
   return (
-    <div className="relative inline-flex flex-col w-full h-[640px] overflow-hidden">
+    <div className="relative inline-flex flex-col w-[512px] h-[512px] overflow-hidden">
       <div className="relative w-full h-full">
         <AnimatePresence>
           <motion.img
@@ -70,16 +73,16 @@ function Carousel({ images }) {
             animate="visible"
             exit={direction === "right" ? "exitRight" : "exitLeft"}
             variants={slideVariants}
-            className="absolute top-0 left-0 w-full h-full object-cover max-w-[640px] max-h-[640px]"
+            className="absolute top-0 left-0 w-full h-full object-cover max-w-[512px] max-h-[512px]"
           />
         </AnimatePresence>
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between align-middle">
         <motion.div
           // Left Button (Previous)
           variants={slidersVariants}
           whileHover="hover"
-          className="z-10 bg-[#fb666675] text-white absolute h-[25px] w-[25px] m-2.5 rounded-[50%] left-0 top-1/2 transform -translate-y-1/2 flex items-center justify-center"
+          className="z-10 bg-[#fb666675] text-white absolute h-[25px] w-[25px] m-2.5 rounded-[50%] left-0 top-1/2 origin-center flex items-center justify-center"
           onClick={handlePrevious}
         >
           <svg
@@ -99,7 +102,7 @@ function Carousel({ images }) {
           // Right Button (Next)
           variants={slidersVariants}
           whileHover="hover"
-          className="z-10 bg-[#fb666675] text-white absolute h-[25px] w-[25px] m-2.5 rounded-[50%] right-0 top-1/2 transform -translate-y-1/2 flex items-center justify-center"
+          className="z-10 align-middle bg-[#fb66667c] text-white absolute h-[25px] w-[25px] m-2.5 rounded-[50%] right-0 top-1/2 origin-center flex items-center justify-center"
           onClick={handleNext}
         >
           <svg

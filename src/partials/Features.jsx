@@ -1,10 +1,9 @@
 // TODO:
-// - Implement Carousel component and style accordingly
+// - Resize Tab images to match carousel
+//  - Make images resize responsively (similar to carousel)
 
 import React, { useState, useRef, useEffect } from "react";
 import Transition from "../utils/Transition";
-import Carousel from "./Carousel";
-
 import Demo from "../images/demo event.jpeg";
 import DemoSP23 from "../images/demo-event-sp23.jpg";
 import DemoFA221 from "../images/demo-event-fa22-1.jpg";
@@ -15,6 +14,7 @@ import Step2 from "../images/step2.jpg";
 import Step3 from "../images/step3.jpg";
 import Step4 from "../images/step4.jpeg";
 import Step5 from "../images/step5.jpeg";
+import SimpleCarousel from "./SimpleCarousel";
 
 const stepImages = [Step1, Step2, Step3, Step4, Step5];
 
@@ -246,8 +246,8 @@ function Features() {
                     <img
                       className="md:max-w-none mx-auto rounded"
                       src={Step1}
-                      width="500"
-                      height="462"
+                      width="512"
+                      height="512"
                       alt="Features bg"
                     />
                   </div>
@@ -268,8 +268,8 @@ function Features() {
                     <img
                       className="md:max-w-none mx-auto rounded"
                       src={Step2}
-                      width="500"
-                      height="462"
+                      width="512"
+                      height="512"
                       alt="Features bg"
                     />
                   </div>
@@ -290,8 +290,8 @@ function Features() {
                     <img
                       className="md:max-w-none mx-auto rounded"
                       src={Step3}
-                      width="500"
-                      height="462"
+                      width="512"
+                      height="512"
                       alt="Features bg"
                     />
                   </div>
@@ -312,8 +312,8 @@ function Features() {
                     <img
                       className="md:max-w-none mx-auto rounded"
                       src={Step4}
-                      width="500"
-                      height="462"
+                      width="512"
+                      height="512"
                       alt="Features bg"
                     />
                   </div>
@@ -334,8 +334,8 @@ function Features() {
                     <img
                       className="md:max-w-none mx-auto rounded"
                       src={Step5}
-                      width="500"
-                      height="462"
+                      width="512"
+                      height="512"
                       alt="Features bg"
                     />
                   </div>
@@ -352,7 +352,7 @@ function Features() {
                   leaveStart="opacity-100 translate-y-0"
                   leaveEnd="opacity-0 -translate-y-16"
                 >
-                  <Carousel images={demoImages}></Carousel>
+                  <SimpleCarousel images={demoImages} />
                 </Transition>
               </div>
             </div>

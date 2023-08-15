@@ -35,7 +35,10 @@ function BasicModal({ open, onClose }) {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <Box sx={style} className="focus:outline-none focus:ring-O">
+      <Box
+        sx={style}
+        className="focus:outline-none focus:ring-O rounded-[10px]"
+      >
         <Typography
           id="modal-modal-title"
           variant="h6"
