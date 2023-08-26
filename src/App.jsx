@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import ResetPassword from "./pages/ResetPassword";
+import PMPortal from "./pages/PMPortal";
 import FeaturesBlocks from "./partials/FeaturesBlocks";
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
           path="/uncpm-dev-website/reset-password/"
           element={<ResetPassword />}
         />
+        <Route path="/uncpm-dev-website/pm-portal/" element={<PMPortal />} />
       </Routes>
     </>
   );

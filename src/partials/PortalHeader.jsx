@@ -9,12 +9,10 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "../images/pmlogo.png";
 import BasicModal from "./Modal";
-import classnames from "classnames";
 
-function Header() {
+function PortalHeader() {
   const [top, setTop] = useState(true);
   // Remember to assign a link to application
-  const [application, setApplication] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -29,13 +27,6 @@ function Header() {
       window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to top if on homepage
     } else {
       window.location.href = "/uncpm-dev-website/"; // Navigate to homepage if on other pages
-    }
-  };
-
-  const showApplicationMessage = (e) => {
-    if (!application) {
-      e.preventDefault(); // For preventing redirection/refreshing when there is no application link
-      setModalOpen(true); // Open the modal
     }
   };
 
@@ -97,62 +88,19 @@ function Header() {
             <ul className="flex flex-grow flex-wrap justify-end  items-center">
               <li>
                 <Link
-                  to="/uncpm-dev-website/#about"
-                  className="font-medium text-gray-600 hover:text-red-500 px-5 py-3 flex items-center transition duration-150 ease-in-out"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="/uncpm-dev-website/#lab"
-                  className="font-medium text-gray-600 hover:text-red-500 px-5 py-3 flex items-center transition duration-150 ease-in-out"
-                >
-                  Lab
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/uncpm-dev-website/#team"
-                  className="font-medium text-gray-600 hover:text-red-500 px-5 py-3 flex items-center transition duration-150 ease-in-out"
-                >
-                  Team
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/uncpm-dev-website/#subscribe"
-                  className="font-medium text-gray-600 hover:text-red-500 px-5 py-3 flex items-center transition duration-150 ease-in-out"
-                >
-                  Subscribe
-                </a>
-              </li>
-              <li>
-                <Link
                   to="/uncpm-dev-website/signin"
                   className="font-medium text-gray-600 hover:text-red-500 px-5 py-3 flex items-center transition duration-150 ease-in-out"
                 >
-                  Login
+                  Profile
                 </Link>
               </li>
               <li>
-                <a
-                  href={application}
-                  onClick={showApplicationMessage}
+                <Link
+                  to="/uncpm-dev-website/"
                   className="btn-sm text-neutral-50 bg-red-600 hover:bg-red-300 ml-3"
                 >
-                  <span>Apply</span>
-                  <svg
-                    className="w-3 h-3 fill-current text-neutral-50 flex-shrink-0 ml-2 -mr-1"
-                    viewBox="0 0 12 12"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z"
-                      fillRule="nonzero"
-                    />
-                  </svg>
-                </a>
+                  Logout
+                </Link>
               </li>
             </ul>
           </nav>
@@ -163,4 +111,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default PortalHeader;

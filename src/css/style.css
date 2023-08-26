@@ -13,6 +13,12 @@
 
 @import "tailwindcss/utilities";
 
+@media (max-width: 768px) {
+  .hidden {
+    display: none !important;
+  }
+}
+
 /* Additional Tailwind directives: https://tailwindcss.com/docs/functions-and-directives/#responsive */
 @layer utilities {
   .rtl {

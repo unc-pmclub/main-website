@@ -6,7 +6,7 @@ module.exports = {
         "900/450": "900 / 450",
       },
       backgroundImage: {
-        "layered-waves": "url('./images/layered-waves-haikei.svg')",
+        "layered-waves": "url(/dist/assets/layered-waves-haikei.png)",
       },
       colors: {
         gray: {

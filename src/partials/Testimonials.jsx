@@ -11,7 +11,6 @@ import CulTRUE from "../images/CulTRUE_logo.png";
 import Protopia from "../images/protopia_logo.png";
 import Liine from "../images/liine_logo.png";
 import Subbed from "../images/subbed-logo.png";
-import ExtendedCarousel from "./ExtendedCarousel";
 import MultipleCarousel from "./MultipleCarousel";
 
 function Testimonials() {
