@@ -1,10 +1,40 @@
-import React from "react";
+// TODO: Create success modal (esp. message abt check email for approval notification)
+
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import Header from "../partials/Header";
-import Banner from "../partials/Banner";
+
+import { createUser } from "../auth/create-user";
+
+import BasicModal from "../partials/Modal";
+import { getFirebaseErrorMessage } from "../auth/firebase-error-mapping";
 
 function SignUp() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  // Add Implementation for receiving error code and displaying corresponding firebase error message
+  // const [errorMessage, setErrorMessage] = useState("");
+  const [errorInfo, setErrorInfo] = useState(null);
+
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+    console.log(name);
+
+    try {
+      await createUser(email, password, name);
+    } catch (error) {
+      console.error("Error during sign up: ", error);
+
+      const friendlyMessage = getFirebaseErrorMessage(error.code);
+      setErrorInfo({
+        header: error.message,
+        message: friendlyMessage,
+      });
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
       {/*  Site header */}
@@ -25,6 +55,7 @@ function SignUp() {
               {/* Form */}
               <div className="max-w-sm mx-auto">
                 <form>
+                  {/* Name Field */}
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                       <label
@@ -36,12 +67,15 @@ function SignUp() {
                       <input
                         id="name"
                         type="text"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         className="form-input w-full text-gray-800"
-                        placeholder="Enter your name"
+                        placeholder="Enter your name (ex: John Doe)"
                         required
                       />
                     </div>
                   </div>
+                  {/* Email Field */}
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                       <label
@@ -53,12 +87,15 @@ function SignUp() {
                       <input
                         id="email"
                         type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         className="form-input w-full text-gray-800"
                         placeholder="Enter your email address"
                         required
                       />
                     </div>
                   </div>
+                  {/* Password Field */}
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                       <label
@@ -70,6 +107,8 @@ function SignUp() {
                       <input
                         id="password"
                         type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                         className="form-input w-full text-gray-800"
                         placeholder="Enter your password"
                         required
@@ -78,7 +117,11 @@ function SignUp() {
                   </div>
                   <div className="flex flex-wrap -mx-3 mt-6">
                     <div className="w-full px-3">
-                      <button className="btn text-white bg-blue-600 hover:bg-blue-700 w-full">
+                      <button
+                        type="button"
+                        className="btn text-white bg-blue-600 hover:bg-blue-700 w-full"
+                        onClick={handleSignUp}
+                      >
                         Sign up
                       </button>
                     </div>
@@ -154,6 +197,14 @@ function SignUp() {
           </div>
         </section>
       </main>
+      {errorInfo && (
+        <BasicModal
+          open={true}
+          onClose={() => setErrorInfo(null)}
+          header={errorInfo.header}
+          message={errorInfo.message}
+        />
+      )}
     </div>
   );
 }

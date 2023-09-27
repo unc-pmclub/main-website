@@ -15,19 +15,22 @@ const style = {
   bgcolor: "background.paper",
   border: "4px solid #000",
   boxShadow: 24,
+};
+
+const headerStyle = {
+  position: "relative",
+  bgcolor: "#DC2626",
+  color: "white",
+  py: 2,
+  px: 4,
+  borderRadius: "5px 5px 0 0",
+};
+
+const messageStyle = {
   p: 4,
 };
 
-const modalHeader = <div>Application Status:</div>;
-
-const modalMessage = (
-  <div>
-    Applications are currently closed! <br></br> Check back soon or subscribe to
-    our mailing list to stay up to date.
-  </div>
-);
-
-function BasicModal({ open, onClose }) {
+function BasicModal({ open, onClose, header, message }) {
   return (
     <Modal
       open={open}
@@ -44,11 +47,12 @@ function BasicModal({ open, onClose }) {
           variant="h6"
           component="h2"
           fontFamily="Helvetica Neue"
+          sx={headerStyle}
         >
-          {modalHeader}
+          {header}
         </Typography>
-        <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-          {modalMessage}
+        <Typography id="modal-modal-description" sx={messageStyle}>
+          {message}
         </Typography>
       </Box>
     </Modal>

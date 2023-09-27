@@ -11,6 +11,15 @@ function HeroHome() {
   const [application, setApplication] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
 
+  const modalHeader = <div>Application Status:</div>;
+
+  const modalMessage = (
+    <div>
+      Applications are currently closed! <br></br> Check back soon or subscribe
+      to our mailing list to stay up to date.
+    </div>
+  );
+
   const showApplicationMessage = (e) => {
     if (!application) {
       e.preventDefault(); // For preventing redirection/refreshing when there is no application link
@@ -171,7 +180,12 @@ function HeroHome() {
           </div>
         </div>
       </div>
-      <BasicModal open={modalOpen} onClose={() => setModalOpen(false)} />
+      <BasicModal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        header={modalHeader}
+        message={modalMessage}
+      />
     </section>
   );
 }

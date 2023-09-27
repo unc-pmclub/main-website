@@ -1,13 +1,45 @@
 // TODO:
-//  - Add Page Content section similar to ResetPassword page explaining what who the login page is for
+//  - Add page description
+//  - Add user friendly error messages (esp. user created, not yet approved)
 
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 import Header from "../partials/Header";
-import Banner from "../partials/Banner";
+import useAuth from "../auth/use-auth";
+import BasicModal from "../partials/Modal";
+import { signInUser } from "../auth/sign-in-user";
 
 function SignIn() {
+  const { user, error } = useAuth();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [localError, setLocalError] = useState(null);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
+
+  const handleSignIn = async (e) => {
+    e.preventDefault();
+
+    try {
+      await signInUser(email, password);
+      if (user) {
+        navigate("/uncpm-dev-website/pm-portal");
+      } else if (error) {
+        setLocalError(error);
+      }
+    } catch (error) {
+      setLocalError(error.message);
+    }
+  };
+
+  useEffect(() => {
+    if (error) {
+      setIsModalOpen(true);
+    }
+  }, [error]);
+
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
       {/*  Site header */}
@@ -27,7 +59,8 @@ function SignIn() {
 
               {/* Form */}
               <div className="max-w-sm mx-auto">
-                <form>
+                <form onSubmit={handleSignIn}>
+                  {/* Email Field */}
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                       <label
@@ -42,9 +75,12 @@ function SignIn() {
                         className="form-input w-full text-gray-800"
                         placeholder="Enter your email address"
                         required
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                       />
                     </div>
                   </div>
+                  {/* Password + Trouble signing in field */}
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                       <div className="flex justify-between">
@@ -67,6 +103,8 @@ function SignIn() {
                         className="form-input w-full text-gray-800"
                         placeholder="Enter your password"
                         required
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                       />
                     </div>
                   </div>
@@ -82,14 +120,15 @@ function SignIn() {
                       </div>
                     </div>
                   </div>
-                  <div className="flex flex-wrap -mx-3 mt-6">
-                    <div className="w-full px-3">
-                      <Link to="/uncpm-dev-website/pm-portal">
-                        <button className="btn text-white bg-blue-600 hover:bg-blue-700 w-full">
-                          Sign in
-                        </button>
-                      </Link>
-                    </div>
+                  {/* Sign In Button */}
+
+                  <div className="w-full px-3">
+                    <button
+                      type="submit"
+                      className="btn text-white bg-blue-600 hover:bg-blue-700 w-full"
+                    >
+                      Sign in
+                    </button>
                   </div>
                 </form>
                 <div className="flex items-center my-6">
@@ -151,6 +190,12 @@ function SignIn() {
           </div>
         </section>
       </main>
+      <BasicModal
+        open={localError !== null}
+        onClose={() => setLocalError(null)}
+        header="Error"
+        message={localError}
+      />
     </div>
   );
 }

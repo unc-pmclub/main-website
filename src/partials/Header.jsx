@@ -19,6 +19,15 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
+  const modalHeader = <div>Application Status:</div>;
+
+  const modalMessage = (
+    <div>
+      Applications are currently closed! <br></br> Check back soon or subscribe
+      to our mailing list to stay up to date.
+    </div>
+  );
+
   const handleLogoClick = (e) => {
     e.preventDefault();
 
@@ -158,7 +167,12 @@ function Header() {
           </nav>
         </div>
       </div>
-      <BasicModal open={modalOpen} onClose={() => setModalOpen(false)} />
+      <BasicModal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        header={modalHeader}
+        message={modalMessage}
+      />
     </header>
   );
 }

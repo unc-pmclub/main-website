@@ -1,0 +1,22 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Matching the "users" collection and any document inside of it.
+    match /users/{userId} {
+      // Allow reading if the user is authenticated.
+      allow read: if request.auth.uid != null;
+
+      // Allow creating a document if the user is authenticated and the 'approved' field is set to false.
+      allow create: if request.auth.uid == userId && 
+                    request.resource.data.approved == false;
+
+      // Allow updating their own document but prevent changing the 'approved' field.
+      allow update: if request.auth.uid == userId && 
+                    request.resource.data.approved == resource.data.approved;
+    }
+    
+    // NOTE: place other rules for other collections below this
+  }
+}
