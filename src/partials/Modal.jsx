@@ -30,7 +30,15 @@ const messageStyle = {
   p: 4,
 };
 
-function BasicModal({ open, onClose, header, message }) {
+function BasicModal({ open, onClose, header, message, headerBackgroundColor }) {
+
+  if (headerBackgroundColor) {
+    headerStyle.bgcolor = headerBackgroundColor;
+  } else {
+    headerStyle.bgcolor = "#DC2626";
+  }
+
+
   return (
     <Modal
       open={open}

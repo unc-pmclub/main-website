@@ -6,7 +6,7 @@ service cloud.firestore {
     // Matching the "users" collection and any document inside of it.
     match /users/{userId} {
       // Allow reading if the user is authenticated.
-      allow read: if request.auth.uid != null;
+      allow read: if request.auth.uid == userId;
 
       // Allow creating a document if the user is authenticated and the 'approved' field is set to false.
       allow create: if request.auth.uid == userId && 

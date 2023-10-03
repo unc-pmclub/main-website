@@ -14,9 +14,7 @@ function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
-  // Add Implementation for receiving error code and displaying corresponding firebase error message
-  // const [errorMessage, setErrorMessage] = useState("");
-  const [errorInfo, setErrorInfo] = useState(null);
+  const [modalInfo, setModalInfo] = useState(null);
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -24,11 +22,18 @@ function SignUp() {
 
     try {
       await createUser(email, password, name);
+      setModalInfo({
+        type: "confirmation",
+        modalHeaderColor: "#00b300",
+        header: "Success!",
+        message: "Your request to create an account has been received. Please check your email for confirmation. If approved, you will be notified via email."
+      });
     } catch (error) {
       console.error("Error during sign up: ", error);
 
       const friendlyMessage = getFirebaseErrorMessage(error.code);
-      setErrorInfo({
+      setModalInfo({
+        type: "error",
         header: error.message,
         message: friendlyMessage,
       });
@@ -48,7 +53,7 @@ function SignUp() {
               {/* Page header */}
               <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
                 <h1 className="h1">
-                  Welcome. We exist to make entrepreneurism easier.
+                  Welcome. We exist to make entrepreneurialism easier.
                 </h1>
               </div>
 
@@ -197,12 +202,13 @@ function SignUp() {
           </div>
         </section>
       </main>
-      {errorInfo && (
+      {modalInfo && (
         <BasicModal
           open={true}
-          onClose={() => setErrorInfo(null)}
-          header={errorInfo.header}
-          message={errorInfo.message}
+          onClose={() => setModalInfo(null)}
+          header={modalInfo.header}
+          message={modalInfo.message}
+          headerBackgroundColor={modalInfo.type === "confirmation" ? modalInfo.modalHeaderColor : undefined}
         />
       )}
     </div>

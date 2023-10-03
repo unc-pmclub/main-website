@@ -1,13 +1,39 @@
 // TODO:
 //  - Add clickable text to return to sign in page
 
-import React from "react";
+import React, {useState} from "react";
 
 import Header from "../partials/Header";
 import Banner from "../partials/Banner";
-import { Link } from "react-router-dom";
+import { Link, useActionData } from "react-router-dom";
+import sendPasswordReset from "../auth/reset-password";
+import BasicModal from "../partials/Modal";
+
 
 function ResetPassword() {
+  const [email, setEmail] = useState("");
+  const [modalInfo, setModalInfo] = useState(null);
+
+  
+  const handleResetPassword = async (e) => {
+    e.preventDefault();
+    try {
+      await sendPasswordReset(email);
+      setModalInfo({
+        type: "confirmation",
+        modalHeaderColor: "#00b300",
+        header: "Success!",
+        message: "Password reset email has been sent. Please check your email"
+      });
+    } catch (error) {
+      setModalInfo({
+        type: "error",
+        header: error.code,
+        message: error.message
+      });
+    };
+  };
+
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
       {/*  Site header */}
@@ -41,6 +67,8 @@ function ResetPassword() {
                       <input
                         id="email"
                         type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         className="form-input w-full text-gray-800"
                         placeholder="Enter your email address"
                         required
@@ -49,7 +77,7 @@ function ResetPassword() {
                   </div>
                   <div className="flex flex-wrap -mx-3 mt-6">
                     <div className="w-full px-3">
-                      <button className="btn text-white bg-blue-600 hover:bg-blue-700 w-full">
+                      <button className="btn text-white bg-blue-600 hover:bg-blue-700 w-full" onClick={handleResetPassword}>
                         Send reset link
                       </button>
                     </div>
@@ -63,6 +91,15 @@ function ResetPassword() {
           </div>
         </section>
       </main>
+      {modalInfo && (
+        <BasicModal
+          open={true}
+          onClose={() => setModalInfo(null)}
+          header={modalInfo.header}
+          message={modalInfo.message}
+          headerBackgroundColor={modalInfo.type === "confirmation" ? modalInfo.modalHeaderColor : undefined}
+        />
+      )}
     </div>
   );
 }

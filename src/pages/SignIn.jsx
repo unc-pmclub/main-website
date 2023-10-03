@@ -1,6 +1,5 @@
 // TODO:
 //  - Add page description
-//  - Add user friendly error messages (esp. user created, not yet approved)
 
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -9,13 +8,14 @@ import Header from "../partials/Header";
 import useAuth from "../auth/use-auth";
 import BasicModal from "../partials/Modal";
 import { signInUser } from "../auth/sign-in-user";
+import { getFirebaseErrorMessage } from "../auth/firebase-error-mapping";
+
 
 function SignIn() {
   const { user, error } = useAuth();
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [localError, setLocalError] = useState(null);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [modalInfo, setModalInfo] = useState(null);
 
   const navigate = useNavigate();
 
@@ -27,18 +27,21 @@ function SignIn() {
       if (user) {
         navigate("/uncpm-dev-website/pm-portal");
       } else if (error) {
-        setLocalError(error);
+        setModalInfo({
+          type: "error",
+          header: "Error",
+          message: error
+        });
       }
     } catch (error) {
-      setLocalError(error.message);
+      const friendlyMessage = getFirebaseErrorMessage(error.code);
+      setModalInfo({
+        type: "error",
+        header: "Error",
+        message: (friendlyMessage ? friendlyMessage : error),
+      });
     }
   };
-
-  useEffect(() => {
-    if (error) {
-      setIsModalOpen(true);
-    }
-  }, [error]);
 
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
@@ -53,7 +56,7 @@ function SignIn() {
               {/* Page header */}
               <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
                 <h1 className="h1">
-                  Welcome back. We exist to make entrepreneurism easier.
+                  Welcome back. We exist to make entrepreneurialism easier.
                 </h1>
               </div>
 
@@ -190,12 +193,15 @@ function SignIn() {
           </div>
         </section>
       </main>
-      <BasicModal
-        open={localError !== null}
-        onClose={() => setLocalError(null)}
-        header="Error"
-        message={localError}
-      />
+      {modalInfo && (
+        <BasicModal
+          open={true}
+          onClose={() => setModalInfo(null)}
+          header={modalInfo.header}
+          message={modalInfo.message}
+          headerBackgroundColor={modalInfo.type === "confirmation" ? modalInfo.modalHeaderColor : undefined}
+        />
+      )}
     </div>
   );
 }
