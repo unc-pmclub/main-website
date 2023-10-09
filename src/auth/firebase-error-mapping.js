@@ -9,6 +9,8 @@ const firebaseErrorMessages = {
   "auth/weak-password": "The password is too weak. (<6 char)",
   "auth/email-already-in-use": "This email is already in use.",
   "auth/missing-email": "Please enter in a valid email.",
+  "auth/popup-closed-by-user": "The popup was closed before successful authentication.",
+  "auth/account-exists-with-different-credential": "An account exists already with the other provider (Google/GitHub). Please use the other provider to Sign in."
   // Add other error messages as needed (check documentation) . . .
 };
 

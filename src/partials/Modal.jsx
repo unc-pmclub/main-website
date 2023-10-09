@@ -5,6 +5,7 @@
 
 import * as React from "react";
 import { Box, Modal, Typography } from "@mui/material";
+import { CircularProgress } from "@mui/material";
 
 const style = {
   position: "absolute",
@@ -60,7 +61,7 @@ function BasicModal({ open, onClose, header, message, headerBackgroundColor }) {
           {header}
         </Typography>
         <Typography id="modal-modal-description" sx={messageStyle}>
-          {message}
+          {message || <CircularProgress />}
         </Typography>
       </Box>
     </Modal>

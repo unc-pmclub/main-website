@@ -8,38 +8,91 @@ import Header from "../partials/Header";
 import useAuth from "../auth/use-auth";
 import BasicModal from "../partials/Modal";
 import { signInUser } from "../auth/sign-in-user";
+import { signInWithProvider } from "../auth/signInWithProvider";
 import { getFirebaseErrorMessage } from "../auth/firebase-error-mapping";
+// import { checkAndCreateUser } from "../auth/checkAndCreateUser";
+import { displayError } from "../utils/modalHelpers";
+import { displaySuccess } from "../utils/modalHelpers";
+import { signOut } from "firebase/auth";
 
 
 function SignIn() {
-  const { user, error } = useAuth();
+  const { user, error, setError, loading, setLoading } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [modalInfo, setModalInfo] = useState(null);
-
+  const [loginAttempted, setLoginAttempted] = useState(false);
+  // const successMessage = "Your request to create an account has been received. Please check your email for confirmation. If approved, you will be notified via email.";
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (loginAttempted) {
+      if (user) {
+        navigate("/uncpm-dev-website/pm-portal");
+      }
+      if (error) {
+        displayError(error, setModalInfo);
+        setError(null);
+      }
+    }
+  }, [user, error]);
 
   const handleSignIn = async (e) => {
     e.preventDefault();
-
+    setLoginAttempted(true);
+    setLoading(true);
     try {
       await signInUser(email, password);
       if (user) {
         navigate("/uncpm-dev-website/pm-portal");
       } else if (error) {
-        setModalInfo({
-          type: "error",
-          header: "Error",
-          message: error
-        });
+        // const friendlyMessage = getFirebaseErrorMessage(error.code)
+        displayError(error, setModalInfo);
       }
     } catch (error) {
-      const friendlyMessage = getFirebaseErrorMessage(error.code);
-      setModalInfo({
-        type: "error",
-        header: "Error",
-        message: (friendlyMessage ? friendlyMessage : error),
-      });
+        displayError(error, setModalInfo);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+
+  const handleGoogleAuth = async (e) => {
+    e.preventDefault();
+    setLoginAttempted(true);
+    setLoading(true);
+    try {
+      await signInWithProvider("google", setModalInfo);
+      if (user) {
+        navigate("/uncpm-dev-website/pm-portal");
+        // displaySuccess(successMessage, setModalInfo);
+      } else if (error) {
+        displayError(error, setModalInfo);
+      }
+    } catch (error) {
+        displayError(error, setModalInfo);
+        signOut(auth);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleGitHubAuth = async (e) => {
+    e.preventDefault();
+    setLoginAttempted(true);
+    setLoading(true);
+    try {
+      await signInWithProvider("github", setModalInfo);
+      if (user) {
+        navigate("/uncpm-dev-website/pm-portal");
+      } else if (error) {
+        displayError(error, setModalInfo);
+      }
+    } catch (error) {
+      displayError(error, setModalInfo);
+      signOut()
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -148,7 +201,7 @@ function SignIn() {
                 <form>
                   <div className="flex flex-wrap -mx-3 mb-3">
                     <div className="w-full px-3">
-                      <button className="btn px-0 text-white bg-gray-900 hover:bg-gray-800 w-full relative flex items-center">
+                      <button className="btn px-0 text-white bg-gray-900 hover:bg-gray-800 w-full relative flex items-center" onClick={handleGitHubAuth}>
                         <svg
                           className="w-4 h-4 fill-current text-white opacity-75 flex-shrink-0 mx-4"
                           viewBox="0 0 16 16"
@@ -164,7 +217,7 @@ function SignIn() {
                   </div>
                   <div className="flex flex-wrap -mx-3">
                     <div className="w-full px-3">
-                      <button className="btn px-0 text-white bg-red-600 hover:bg-red-700 w-full relative flex items-center">
+                      <button className="btn px-0 text-white bg-red-600 hover:bg-red-700 w-full relative flex items-center" onClick={handleGoogleAuth}>
                         <svg
                           className="w-4 h-4 fill-current text-white opacity-75 flex-shrink-0 mx-4"
                           viewBox="0 0 16 16"
@@ -193,17 +246,31 @@ function SignIn() {
           </div>
         </section>
       </main>
-      {modalInfo && (
-        <BasicModal
-          open={true}
-          onClose={() => setModalInfo(null)}
-          header={modalInfo.header}
-          message={modalInfo.message}
-          headerBackgroundColor={modalInfo.type === "confirmation" ? modalInfo.modalHeaderColor : undefined}
-        />
-      )}
-    </div>
-  );
+      {loading && (
+      <BasicModal
+        open={true}
+        header="Loading"
+        // no message prop is given so spinner will be shown
+      />
+    )}
+
+    {modalInfo && (
+      <BasicModal
+        open={true}
+        onClose={() => {
+          setModalInfo(null);
+          setLoginAttempted(false);}}
+        header={modalInfo.header}
+        message={modalInfo.message}
+        headerBackgroundColor={
+          modalInfo.type === "confirmation"
+            ? modalInfo.modalHeaderColor
+            : undefined
+        }
+      />
+    )}
+  </div>
+);
 }
 
 export default SignIn;

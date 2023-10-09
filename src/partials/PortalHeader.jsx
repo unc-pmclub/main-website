@@ -9,6 +9,8 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "../images/pmlogo.png";
 import BasicModal from "./Modal";
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebase.config";
 
 function PortalHeader() {
   const [top, setTop] = useState(true);
@@ -98,6 +100,7 @@ function PortalHeader() {
                 <Link
                   to="/uncpm-dev-website/"
                   className="btn-sm text-neutral-50 bg-red-600 hover:bg-red-300 ml-3"
+                  onClick={signOut(auth)}
                 >
                   Logout
                 </Link>
