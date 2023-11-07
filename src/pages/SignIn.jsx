@@ -14,6 +14,7 @@ import { getFirebaseErrorMessage } from "../auth/firebase-error-mapping";
 import { displayError } from "../utils/modalHelpers";
 import { displaySuccess } from "../utils/modalHelpers";
 import { signOut } from "firebase/auth";
+import { auth } from "../../firebase.config";
 
 
 function SignIn() {
@@ -90,7 +91,7 @@ function SignIn() {
       }
     } catch (error) {
       displayError(error, setModalInfo);
-      signOut()
+      signOut(auth);
     } finally {
       setLoading(false);
     }

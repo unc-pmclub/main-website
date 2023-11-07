@@ -1,4 +1,4 @@
-import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 import { db } from "../../firebase.config";
 
 export const handleFirestoreUser = async (firebaseUser) => {

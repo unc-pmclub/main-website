@@ -49,18 +49,19 @@ function PortalHeader() {
     >
       <div className="max-w-6xl mx-auto px-5 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Site branding */}
-          <div className="flex-shrink-0 mr-4">
-            {/* Logo */}
-            <a
-              href="/uncpm-dev-website/"
-              onClick={handleLogoClick}
-              className="block"
-              aria-label="UNC Product Management"
-            >
-              <img className="w-12 h-12" src={Logo}></img>
-            </a>
-          </div>
+        {/* Site branding */}
+        <div className="flex-shrink-0 mr-4">
+          {/* Logo */}
+          <a
+            href="/uncpm-dev-website/"
+            onClick={handleLogoClick}
+            className="flex items-center" // <-- Changed to flex and items-center
+            aria-label="UNC Product Management"
+          >
+            <img className="w-12 h-12" src={Logo} alt="Logo" />
+            <span className="ml-2 text-lg">| PM Portal 1.0</span>
+          </a>
+        </div>
 
           {/* Hamburger Menu Button */}
           <button
@@ -100,7 +101,7 @@ function PortalHeader() {
                 <Link
                   to="/uncpm-dev-website/"
                   className="btn-sm text-neutral-50 bg-red-600 hover:bg-red-300 ml-3"
-                  onClick={signOut(auth)}
+                  onClick={() => signOut(auth)}
                 >
                   Logout
                 </Link>

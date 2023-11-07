@@ -39,22 +39,5 @@ export const signInWithProvider = async (providerType, setModalInfo) => {
     } catch (error) {
         throw error
     }
-    // const userCredential = await signInWithPopup(auth, provider); 
-    // const firebaseUser = userCredential.user;
-    
-    // if (firebaseUser) {
-    //     const uid = firebaseUser.uid;
-    //     const docRef = doc(db, "users", uid);
-    //     const docSnap = await getDoc(docRef);
 
-    //     if (!docSnap.exists()) {
-    //         await setDoc(docRef, {
-    //             approved: false,
-    //             displayName: firebaseUser.displayName,
-    //             email: firebaseUser.email
-    //         });
-
-    //         displaySuccess(successMessage, setModalInfo);
-    //     }
-    // }
 }

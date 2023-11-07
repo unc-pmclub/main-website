@@ -1,16 +1,26 @@
+// TODO: 
+//  - Modify About section (and possibly PortalListContainer component) to allow for messages with no links (see website)
+//  - Adjust vertical spacing between sections (see website)
+
 import React from "react";
 import PortalHeader from "../partials/PortalHeader";
 import ListContainer from "../partials/PortalListContainer";
+import useAuth from "../auth/use-auth";
 
 function PMPortal() {
   // This is a placeholder for the user's name, to be replaced with user'sn name
-  const userName = "John Doe";
+  const { user, loading } = useAuth();
+
+  if (loading) {
+      return <div>Loading...</div>;
+  }
+  const userName = user ? user.displayName : "User";
 
   const aboutSection = [
     {
       listItems: [
         {
-          name: "This is a page for members to quickly access PM and PM Club related materials.",
+          name: "Welcome to PM Portal 1.0! This page is meant to serve as a living hub of PM Club and PM-related resources. Some of these resources have been specially curated for PM Club members, so please do not share anything on this page with non-PM Club members (or speak to an exec member before a resource).",
         },
       ],
     },
@@ -81,8 +91,8 @@ function PMPortal() {
           description: "A brief video on the basic functionality of Figma",
         },
         {
-          name: "Being a successful Project Manager",
-          link: "#",
+          name: "What is a Project Manager",
+          link: "https://drive.google.com/file/d/10eZfv2dFZR_nAGYVziWJkUqCKNw0gd52/view?usp=sharing",
           internal: false,
           description:
             "A video overviewing how to be a good Project Manager in Lab",
@@ -96,21 +106,21 @@ function PMPortal() {
       listItems: [
         {
           name: "Atlassian APM Guide",
-          link: "#",
+          link: "https://drive.google.com/file/d/1TW0St_yVXyl1yUkLKEJzX0ozpA3fqOAW/view?usp=sharing",
           internal: false,
-          description: "I will think of a description later",
+          description: "Link to Atlassian's Campus Associate Product Manager Interview Guide.",
         },
         {
-          name: "Google APM Interview Guide",
-          link: "#",
+          name: "Google Interview Guide for Product Management",
+          link: "https://drive.google.com/file/d/1TW0St_yVXyl1yUkLKEJzX0ozpA3fqOAW/view?usp=sharing",
           internal: false,
-          description: "I will think of this description later-er",
+          description: "Google's interview guide for Product Manager roles",
         },
         {
           name: "MongoDB 2023 Summer Intern Guide",
-          link: "#",
+          link: "https://docs.google.com/presentation/d/1otnYAqUSIeOf1X3e7maHMjvJuLL9Gyw6JqF3HFHZa9Q/edit?usp=sharing",
           internal: false,
-          description: "I will think of this description later-er-er",
+          description: "Presentation overviewing the application process for technical internships at MongoDB.",
         },
       ],
     },
@@ -123,27 +133,27 @@ function PMPortal() {
       listItems: [
         {
           name: "Spotify: A Product Story",
-          link: "#",
+          link: "https://open.spotify.com/show/3L9tzrt0CthF6hNkxYIeSB?si=ee96eb8a01e74bf4",
           internal: false,
-          description: "blah blah blah",
+          description: "Multi-part podcast series from Spotify covering the product decisions that created the revered streaming app.",
         },
         {
           name: "The Product Podcast",
-          link: "#",
+          link: "https://open.spotify.com/show/1XBrhVLsQOIAv3KFBqnzrX?si=c9b0673a80ed492a",
           internal: false,
-          description: "blah blah blah",
+          description: "A podcast covering all things PM (product insights, career tips, and more).",
         },
         {
-          name: "Product Talk",
+          name: "Product Talk: MongoDB PM on Data-Driven Product Management",
           link: "#",
           internal: false,
-          description: "blah blah blah",
+          description: "Episode of the Product Talk podcast featuring a MongoDB PM talking about their approach to data-driven product management.",
         },
         {
           name: "NN/g UX Podcast",
-          link: "#",
+          link: "https://open.spotify.com/show/3GFTfWpfv6m8nhKsPOlT8m?si=95fdf4b5156d497a",
           internal: false,
-          description: "blah blah blah",
+          description: "Podcast from Nielsen Normal group covering UX 'research, design, strategy, and professions.'",
         },
       ],
     },
@@ -157,10 +167,10 @@ function PMPortal() {
           description: "blah blah blah",
         },
         {
-          name: "Atlassian",
-          link: "#",
+          name: "Atlassian Agile Product Management Guide",
+          link: "https://www.atlassian.com/agile/product-management",
           internal: false,
-          description: "blah blah blah",
+          description: "Mini-wiki from Atlassian with tips for new Product Managers and articles on more advanced topics.",
         },
       ],
     },
@@ -200,25 +210,25 @@ function PMPortal() {
           <ListContainer title="Job Postings" sections={jobPostingsSection} />
         </div>
         {/* About */}
-        <div className="md:row-span-2 md:col-start-5 md:row-start-1">
+        <div className="md:row-span-2 md:col-start-5 md:col-span-6 md:row-start-1">
           <ListContainer title="About this Page" sections={aboutSection} />
         </div>
-        {/* Additional Learning */}
-        <div className="md:row-span-4 md:col-start-5 md:row-start-3">
+        {/* PM Recruiting & Interview Resources */}
+        <div className="md:row-span-4 md:col-start-5 md:col-span-6 md:row-start-3">
           <ListContainer
-            title="Additional Learning"
-            sections={additionalLearningSection}
+            title="PM Recruiting & Interviewing Resources"
+            sections={pmRecruitingSection}
           />
         </div>
         {/* PM Lab Resources */}
         <div className="md:col-span-3 md:row-span-2 md:col-start-2 md:row-start-1">
           <ListContainer title="PM Lab Resources" sections={pmLabSection} />
         </div>
-        {/* PM Recruiting & Interviewing */}
+        {/* Additional Learning */}
         <div className="md:col-span-3 md:row-span-3 md:col-start-2 md:row-start-3">
           <ListContainer
-            title="PM Recruiting & Interviewing Resources"
-            sections={pmRecruitingSection}
+            title="Additional Learning"
+            sections={additionalLearningSection}
           />
         </div>
       </div>

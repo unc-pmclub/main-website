@@ -1,4 +1,3 @@
-// TODO: Create success modal (esp. message abt check email for approval notification)
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
@@ -29,12 +28,12 @@ function SignUp() {
         message: "Your request to create an account has been received. Please check your email for confirmation. If approved, you will be notified via email."
       });
     } catch (error) {
-      console.error("Error during sign up: ", error);
+      console.error("Error", error);
 
       const friendlyMessage = getFirebaseErrorMessage(error.code);
       setModalInfo({
         type: "error",
-        header: error.message,
+        header: "Error",
         message: friendlyMessage,
       });
     }
