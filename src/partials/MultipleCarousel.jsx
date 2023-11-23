@@ -44,11 +44,11 @@ export default function MultipleCarousel({ images }) {
   };
 
   const handleImages = (images) => {
-    return images.map((image, index) => (
-      <div className="flex justify-center items-center p-2">
+    return images.map((image) => (
+      <div key={image.name} className="flex justify-center items-center p-2">
         <img
-          src={image}
-          alt={`image-${index}`}
+          src={image.path}
+          alt={`${image.name} Logo`}
           className="mx-auto max-h-50 max-w-[180px]"
         />
       </div>

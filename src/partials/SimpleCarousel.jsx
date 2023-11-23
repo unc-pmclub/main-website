@@ -54,7 +54,7 @@ export default function SimpleCarousel({ images }) {
   };
 
   return (
-    <div className="relative flex flex-col max-w-[512px] h-[550px] overflow-hidden content-center justify-center">
+    <div className="relative flex flex-col max-w-480px] h-[550px] overflow-hidden content-center justify-center">
       <Slider {...settings}>{handleImages(images)}</Slider>
       {/* <div className="text-gray-500 justify-center inline-flex mt-6">
         (Swipe Left or Right!)

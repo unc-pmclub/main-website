@@ -8,7 +8,6 @@ import Testimonials from '../partials/Testimonials';
 import Newsletter from '../partials/Newsletter';
 import Footer from '../partials/Footer';
 import Team from '../partials/Team';
-import Banner from '../partials/Banner';
 
 function Home() {
   return (

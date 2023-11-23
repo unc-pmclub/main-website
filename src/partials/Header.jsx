@@ -9,7 +9,8 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "../images/pmlogo.png";
 import BasicModal from "./Modal";
-import classnames from "classnames";
+// import classnames from "classnames";
+import AnnouncementBar from "./AnnouncementBar";
 
 function Header() {
   const [top, setTop] = useState(true);
@@ -18,6 +19,9 @@ function Header() {
   const [modalOpen, setModalOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+
+  const announcementMessage = "📢 Members: Create an account and check out the PM Portal! Click 'Apply' or: ";
+  const announcementNav = "/uncpm-dev-website/signin";
 
   const modalHeader = <div>Application Status:</div>;
 
@@ -167,6 +171,10 @@ function Header() {
           </nav>
         </div>
       </div>
+      <AnnouncementBar 
+        message={announcementMessage}
+        route={announcementNav}
+      />
       <BasicModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}

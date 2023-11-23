@@ -11,6 +11,7 @@ import Logo from "../images/pmlogo.png";
 import BasicModal from "./Modal";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase.config";
+import AnnouncementBar from "./AnnouncementBar";
 
 function PortalHeader() {
   const [top, setTop] = useState(true);
@@ -18,6 +19,9 @@ function PortalHeader() {
   const [modalOpen, setModalOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+
+  const announcementMessage = "📼 Missed the PM Club x WillowTree Panel? Check out the recording (Password = $t3?.3pD) under 'PM Recruiting Resources' or ";
+  const announcementLink = "https://willowtreeapps.zoom.us/rec/share/KHk_01YiJynPW7hq6cqNBht1HrNJhw9EWLqaA_GrGGttPQJAADDGnX4wu_aKlHEP.J5MiuqBjRV8pWLKh";
 
   const handleLogoClick = (e) => {
     e.preventDefault();
@@ -89,14 +93,14 @@ function PortalHeader() {
             className={`flex flex-grow ${isOpen ? "block" : "hidden"} md:block`}
           >
             <ul className="flex flex-grow flex-wrap justify-end  items-center">
-              <li>
+              {/* <li>
                 <Link
                   to="/uncpm-dev-website/signin"
                   className="font-medium text-gray-600 hover:text-red-500 px-5 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   Profile
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   to="/uncpm-dev-website/"
@@ -110,6 +114,10 @@ function PortalHeader() {
           </nav>
         </div>
       </div>
+      <AnnouncementBar 
+        message={announcementMessage}
+        link={announcementLink}
+      />
       <BasicModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </header>
   );

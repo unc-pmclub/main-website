@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Footer() {
+function Footer({invertTextColor}) {
   return (
     <footer>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -42,8 +42,10 @@ function Footer() {
           </ul>
 
           {/* Copyrights note */}
-          <div className="text-sm text-gray-600 mr-4">Made by UNC Product Management © 2023</div>
-
+          <div className={invertTextColor ? 
+            "text-sm text-white mr-4" : "text-sm text-gray-400 mr-4"}>
+              Made by UNC Product Management Club © 2023
+              </div>
         </div>
 
       </div>

@@ -33,3 +33,24 @@
 [x-cloak=""] {
   display: none;
 }
+
+
+/* Styling related to the scrolling Announcement Bar */
+@keyframes scroll-text {
+  0% { transform: translateX(180%); }
+  100% { transform: translateX(-180%); }
+}
+
+.scroll-marquee {
+  overflow: hidden;
+  white-space: wrap;
+}
+ 
+.scroll-marquee p {   
+  display: inline-block;
+  animation: scroll-text 20s linear infinite;
+}
+
+.scroll-paused p {
+  animation-play-state: paused
+}

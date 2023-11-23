@@ -1,6 +1,3 @@
-// TODO:
-//  - Add page description
-
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -9,10 +6,9 @@ import useAuth from "../auth/use-auth";
 import BasicModal from "../partials/Modal";
 import { signInUser } from "../auth/sign-in-user";
 import { signInWithProvider } from "../auth/signInWithProvider";
-import { getFirebaseErrorMessage } from "../auth/firebase-error-mapping";
-// import { checkAndCreateUser } from "../auth/checkAndCreateUser";
+// import { getFirebaseErrorMessage } from "../auth/firebase-error-mapping";
 import { displayError } from "../utils/modalHelpers";
-import { displaySuccess } from "../utils/modalHelpers";
+// import { displaySuccess } from "../utils/modalHelpers";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase.config";
 
@@ -23,7 +19,6 @@ function SignIn() {
   const [password, setPassword] = useState("");
   const [modalInfo, setModalInfo] = useState(null);
   const [loginAttempted, setLoginAttempted] = useState(false);
-  // const successMessage = "Your request to create an account has been received. Please check your email for confirmation. If approved, you will be notified via email.";
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -47,7 +42,6 @@ function SignIn() {
       if (user) {
         navigate("/uncpm-dev-website/pm-portal");
       } else if (error) {
-        // const friendlyMessage = getFirebaseErrorMessage(error.code)
         displayError(error, setModalInfo);
       }
     } catch (error) {
@@ -66,7 +60,6 @@ function SignIn() {
       await signInWithProvider("google", setModalInfo);
       if (user) {
         navigate("/uncpm-dev-website/pm-portal");
-        // displaySuccess(successMessage, setModalInfo);
       } else if (error) {
         displayError(error, setModalInfo);
       }
@@ -108,10 +101,12 @@ function SignIn() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <div className="pt-32 pb-12 md:pt-40 md:pb-20">
               {/* Page header */}
-              <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+              <div className="max-w-3xl mx-auto text-center pb-10 md:pb-20">
                 <h1 className="h1">
-                  Welcome back. We exist to make entrepreneurialism easier.
+                  Welcome to the PM Portal!
                 </h1>
+                <h3 className="h4">A living resource hub for product management resources</h3>
+                <p className="relative inline-block pt-10 max-w-sm">Log in or create an account to access the PM Portal. Please note, the PM Portal is for UNC PM Club members only and all account creations are manually reviewed.</p>
               </div>
 
               {/* Form */}

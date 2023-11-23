@@ -1,6 +1,7 @@
 // TODO:
 // - Resize Tab images to match carousel
 //  - Make images resize responsively (similar to carousel)
+//  - Adjust photos of Steps 1-5 to match image carousel for Demo Day 
 
 import React, { useState, useRef, useEffect } from "react";
 import Transition from "../utils/Transition";
@@ -63,10 +64,6 @@ function Features() {
               className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-0"
               data-aos="fade-right"
             >
-              {/*<div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
-                <h3 className="h3 mb-3">Powerful suite of tools</h3>
-                <p className="text-xl text-gray-600">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
-              </div> */}
               {/* Tabs buttons */}
               <div className="mb-8 md:mb-0">
                 <a
@@ -242,12 +239,10 @@ function Features() {
                   leaveStart="opacity-100 translate-y-0"
                   leaveEnd="opacity-0 -translate-y-16"
                 >
-                  <div className="relative inline-flex flex-col">
+                  <div className="relative inline-flex flex-col max-h-[480px] max-w-[480px]">
                     <img
-                      className="md:max-w-none mx-auto rounded"
+                      className="object-cover w-full h-full mx-auto rounded"
                       src={Step1}
-                      width="512"
-                      height="512"
                       alt="Features bg"
                     />
                   </div>
@@ -264,12 +259,10 @@ function Features() {
                   leaveStart="opacity-100 translate-y-0"
                   leaveEnd="opacity-0 -translate-y-16"
                 >
-                  <div className="relative inline-flex flex-col">
+                  <div className="relative inline-flex flex-col max-h-[480px] max-w-[480px]">
                     <img
-                      className="md:max-w-none mx-auto rounded"
+                      className="object-cover w-full h-full mx-auto rounded"
                       src={Step2}
-                      width="512"
-                      height="512"
                       alt="Features bg"
                     />
                   </div>
@@ -286,12 +279,10 @@ function Features() {
                   leaveStart="opacity-100 translate-y-0"
                   leaveEnd="opacity-0 -translate-y-16"
                 >
-                  <div className="relative inline-flex flex-col">
+                  <div className="relative inline-flex flex-col max-h-[480px] max-w-[480px]">
                     <img
-                      className="md:max-w-none mx-auto rounded"
+                      className="object-cover w-full h-full mx-auto rounded"
                       src={Step3}
-                      width="512"
-                      height="512"
                       alt="Features bg"
                     />
                   </div>
@@ -308,12 +299,10 @@ function Features() {
                   leaveStart="opacity-100 translate-y-0"
                   leaveEnd="opacity-0 -translate-y-16"
                 >
-                  <div className="relative inline-flex flex-col">
+                  <div className="relative inline-flex flex-col max-h-[480px] max-w-[480px]">
                     <img
-                      className="md:max-w-none mx-auto rounded"
+                      className="object-cover w-full h-full mx-auto rounded"
                       src={Step4}
-                      width="512"
-                      height="512"
                       alt="Features bg"
                     />
                   </div>
@@ -330,12 +319,10 @@ function Features() {
                   leaveStart="opacity-100 translate-y-0"
                   leaveEnd="opacity-0 -translate-y-16"
                 >
-                  <div className="relative inline-flex flex-col">
+                  <div className="relative inline-flex flex-col max-h-[480px] max-w-[480px]">
                     <img
-                      className="md:max-w-none mx-auto rounded"
+                      className="object-cover w-full h-full mx-auto rounded"
                       src={Step5}
-                      width="512"
-                      height="512"
                       alt="Features bg"
                     />
                   </div>
