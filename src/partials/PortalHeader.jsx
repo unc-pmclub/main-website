@@ -12,6 +12,7 @@ import BasicModal from "./Modal";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase.config";
 import AnnouncementBar from "./AnnouncementBar";
+import CloseIcon from "@mui/icons-material/Close";
 
 function PortalHeader() {
   const [top, setTop] = useState(true);
@@ -19,6 +20,8 @@ function PortalHeader() {
   const [modalOpen, setModalOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
 
   const announcementMessage = "📼 Missed the PM Club x WillowTree Panel? Check out the recording (Password = $t3?.3pD) under 'PM Recruiting Resources' or ";
   const announcementLink = "https://willowtreeapps.zoom.us/rec/share/KHk_01YiJynPW7hq6cqNBht1HrNJhw9EWLqaA_GrGGttPQJAADDGnX4wu_aKlHEP.J5MiuqBjRV8pWLKh";
@@ -45,6 +48,10 @@ function PortalHeader() {
     return () => window.removeEventListener("scroll", scrollHandler);
   }, [top]);
 
+  const toggleDrawer = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
+
   return (
     <header
       className={`fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ${
@@ -67,11 +74,16 @@ function PortalHeader() {
           </a>
         </div>
 
-          {/* Hamburger Menu Button */}
+          {/* Hamburger vs. X Menu Button */}
           <button
-            className="md:hidden p-2 rounded-md"
-            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2 rounded-md z-40"
+            onClick={toggleDrawer}
           >
+            {
+            isDrawerOpen ? 
+            <CloseIcon 
+              fontSize="medium" 
+            /> : 
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -86,10 +98,24 @@ function PortalHeader() {
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
+            }
           </button>
 
+           {/*  Mobile site navigation */}
+           <div className={`fixed top-0 right-0 z-30 w-60 h-screen bg-white overflow-y-auto transform ${isDrawerOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out md:hidden`}>
+            <nav className="flex flex-col mt-10 p-4">
+              <Link
+                to="/uncpm-dev-website/"
+                className="btn-sm text-neutral-50 bg-red-600 hover:bg-red-300 ml-3"
+                onClick={() => signOut(auth)}
+              >
+                Logout
+              </Link>
+            </nav>
+          </div>
+
           {/* Site navigation */}
-          <nav
+          {!isDrawerOpen && <nav
             className={`flex flex-grow ${isOpen ? "block" : "hidden"} md:block`}
           >
             <ul className="flex flex-grow flex-wrap justify-end  items-center">
@@ -111,7 +137,7 @@ function PortalHeader() {
                 </Link>
               </li>
             </ul>
-          </nav>
+          </nav>}
         </div>
       </div>
       <AnnouncementBar 

@@ -60,7 +60,11 @@ function BasicModal({ open, onClose, header, message, headerBackgroundColor }) {
         >
           {header}
         </Typography>
-        <Typography id="modal-modal-description" sx={messageStyle}>
+        <Typography 
+          id="modal-modal-description" 
+          sx={messageStyle}
+          component="div"
+        >
           {message || <CircularProgress />}
         </Typography>
       </Box>
