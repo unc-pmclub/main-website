@@ -1,12 +1,12 @@
 {
-  "homepage": "https://bcscc.github.io/uncpm-dev-website/",
+  "homepage": "https://www.uncpmclub.com/",
   "name": "simple-light-react",
   "version": "0.1.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d dist -b V2",
     "preview": "vite preview"
   },
   "dependencies": {
