@@ -25,6 +25,6 @@ const firestoreErrorMessage = {
 };
 
 export function getFirestoreErrorMessage(errorCode) {
-  console.log(errorCode);
+  // console.log(errorCode);
   return firestoreErrorMessage[errorCode] || "An unknown error occurred.";
 }

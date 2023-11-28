@@ -25,7 +25,7 @@ export async function createUser(email, password, displayName) {
       email: email,
     });
 
-    console.log("user created successfully!");
+    // console.log("user created successfully!");
   } catch (error) {
     console.error("Error creating user: ", error.message);
     throw error; // Throwing to display error to user

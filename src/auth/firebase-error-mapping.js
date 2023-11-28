@@ -15,6 +15,6 @@ const firebaseErrorMessages = {
 };
 
 export function getFirebaseErrorMessage(errorCode) {
-  console.log("Code from Firebase Error Mapping: ", errorCode);
+  // console.log("Code from Firebase Error Mapping: ", errorCode);
   return firebaseErrorMessages[errorCode] || "An unknown error occurred.";
 }

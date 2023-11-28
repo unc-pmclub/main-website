@@ -1,9 +1,5 @@
 // TODO:
 //  - Fix deprecated pageYOffset usage on line 15
-//  - Fix hamburger in mobile view
-//    - Fixed hamburger
-//    - Drop-down menu / side navigation drawer
-//    - Implement w/o affecting desktop header
 
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";

@@ -5,7 +5,7 @@ import { displaySuccess } from "../utils/modalHelpers";
 export const checkAndCreateUser = async (user) => {
     const userRef = doc(db, "users", user.uid);
 
-    console.log("user data for creation:", user.email, user.displayName);
+    // console.log("user data for creation:", user.email, user.displayName);
     
     const userDoc = await getDoc(userRef);
 

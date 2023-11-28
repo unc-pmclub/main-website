@@ -105,8 +105,8 @@ function SignIn() {
                 <h1 className="h1">
                   Welcome to the PM Portal!
                 </h1>
-                <h3 className="h4">A living resource hub for product management resources</h3>
-                <p className="relative inline-block pt-10 max-w-sm">Log in or create an account to access the PM Portal. Please note, the PM Portal is for UNC PM Club members only and all account creations are manually reviewed.</p>
+                <h3 className="h4">A living hub of product management resources</h3>
+                <p className="relative inline-block pt-10 max-w-sm">Log in or create an account to access the PM Portal. Please note, the PM Portal is for UNC PM Club members only and all account creations are subject to review.</p>
               </div>
 
               {/* Form */}

@@ -11,7 +11,7 @@ export default function useAuth() {
 
   useEffect(() => {
       return onAuthStateChanged(auth, async (firebaseUser) => {
-        console.log('Firebase Auth User:', firebaseUser);
+        // console.log('Firebase Auth User:', firebaseUser);
         setLoading(true);
           if (firebaseUser) {
               const uid = firebaseUser.uid;
@@ -22,7 +22,7 @@ export default function useAuth() {
                   const userData = docSnap.data();
                   if (userData.approved) {
                       setUser(userData);
-                      console.log("User Data: ", user);
+                    //   console.log("User Data: ", user);
                   } else {
                       setError("Your account is pending approval...");
                       setUser(false);

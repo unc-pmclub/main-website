@@ -17,7 +17,7 @@ function SignUp() {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
-    console.log(name);
+    // console.log(name);
 
     try {
       await createUser(email, password, name);
