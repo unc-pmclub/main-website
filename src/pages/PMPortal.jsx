@@ -3,6 +3,7 @@ import PortalHeader from "../partials/PortalHeader";
 import ListContainer from "../partials/PortalListContainer";
 import useAuth from "../auth/use-auth";
 import Footer from "../partials/Footer";
+import backgroundImage from "../images/layered-waves-haikei.png";
 
 function PMPortal() {
   const { user, loading } = useAuth();
@@ -199,7 +200,7 @@ function PMPortal() {
     <div
       className="flex flex-col min-h-screen items-center justify-start bg-cover bg-center overflow-hidden"
       style={{
-        backgroundImage: "url(dist/assets/layered-waves-haikei.png)",
+        backgroundImage: `url(${backgroundImage})`,
       }}
     >
       <PortalHeader />
