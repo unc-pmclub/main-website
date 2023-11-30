@@ -24,7 +24,7 @@ function PortalHeader() {
 
 
   const announcementMessage = "📼 Missed the PM Club x WillowTree Panel? Check out the recording (Password = $t3?.3pD) under 'PM Recruiting Resources' or ";
-  const announcementLink = "https://willowtreeapps.zoom.us/rec/share/KHk_01YiJynPW7hq6cqNBht1HrNJhw9EWLqaA_GrGGttPQJAADDGnX4wu_aKlHEP.J5MiuqBjRV8pWLKh";
+  const announcementLink = import.meta.env.VITE_WILLOW_TREE_PANEL;
 
   const handleLogoClick = (e) => {
     e.preventDefault();

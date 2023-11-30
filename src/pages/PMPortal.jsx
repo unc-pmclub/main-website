@@ -87,20 +87,20 @@ function PMPortal() {
       listItems: [
         {
           name: "Working with Figma",
-          link: "https://drive.google.com/file/d/1XE5dZ-0WOlPOPnABB18D6bZ8LZQBkV4I/view?usp=sharing",
+          link: import.meta.env.VITE_PMCLUB_WORKING_WITH_FIGMA,
           internal: false,
           description: "A brief video on the basic functionality of Figma.",
         },
         {
           name: "What is a Project Manager",
-          link: "https://drive.google.com/file/d/10eZfv2dFZR_nAGYVziWJkUqCKNw0gd52/view?usp=sharing",
+          link: import.meta.env.VITE_PMCLUB_BEING_PROJECT_MANAGER,
           internal: false,
           description:
             "A video overviewing how to be a good Project Manager in Lab.",
         },
         {
           name: "Atlassian JIRA & Confluence Overview",
-          link: "https://drive.google.com/file/d/1vxi1hGKvIYy-CCc3Aup8Ng7sDZvenrwc/view?usp=sharing",
+          link: import.meta.env.VITE_PMCLUB_JIRA_CONFLUENCE_TUTORIAL,
           internal: false,
           description: "A video introducing common features and functionality of JIRA & Confluence, two widely-used tools in the field of Product Management/Software Development."
         }
@@ -113,31 +113,31 @@ function PMPortal() {
       listItems: [
         {
           name: "Atlassian APM Guide",
-          link: "https://drive.google.com/file/d/1TW0St_yVXyl1yUkLKEJzX0ozpA3fqOAW/view?usp=sharing",
+          link: import.meta.env.VITE_ATLASSIAN_APM_GUIDE,
           internal: false,
           description: "Link to Atlassian's Campus Associate Product Manager Interview Guide.",
         },
         {
           name: "Google Interview Guide for Product Management",
-          link: "https://drive.google.com/file/d/1TW0St_yVXyl1yUkLKEJzX0ozpA3fqOAW/view?usp=sharing",
+          link: import.meta.env.VITE_GOOGLE_PM_INTERVIEW_GUIDE,
           internal: false,
           description: "Google's interview guide for Product Manager roles.",
         },
         {
           name: "MongoDB 2023 Summer Intern Guide",
-          link: "https://docs.google.com/presentation/d/1otnYAqUSIeOf1X3e7maHMjvJuLL9Gyw6JqF3HFHZa9Q/edit?usp=sharing",
+          link: import.meta.env.VITE_MONGO_DB_SUMMER23_INTERN_GUIDE,
           internal: false,
-          description: "Presentation overviewing the application process for technical internships at MongoDB.",
+          description: "Presentation going over the application process for technical internships at MongoDB.",
         },
         {
           name: "Gummadi's PM Recruiting Guide",
-          link: "https://docs.google.com/document/d/1uJqh_M6ovxEzQfZo-vX6RIO01B-0Ko6X4lTO4FfSCZo/edit?usp=sharing",
+          link: import.meta.env.VITE_GUMMADI_PM_RECRUITING_GUIDE,
           internal: false,
           description: "Detailed learnings and advice from a UMich Alumni turned Google PM."
         },
         {
           name: "11/16 PM Club x WillowTree Panel Recording",
-          link: "https://willowtreeapps.zoom.us/rec/share/KHk_01YiJynPW7hq6cqNBht1HrNJhw9EWLqaA_GrGGttPQJAADDGnX4wu_aKlHEP.J5MiuqBjRV8pWLKh",
+          link: import.meta.env.VITE_WILLOW_TREE_PANEL,
           internal: false,
           description: "Recording of the 11/16 Panel with WillowTree. (Password = $t3?.3pD)"
         }

@@ -32,6 +32,17 @@ jobs:
       # The URL will be the custom domain you have configured with GitHub Pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    env:
+      VITE_FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
+      VITE_WILLOW_TREE_PANEL: ${{ secrets.WILLOW_TREE_PANEL }}
+      VITE_ATLASSIAN_APM_GUIDE: ${{ secrets.ATLASSIAN_APM_GUIDE }}
+      VITE_MONGO_DB_SUMMER23_INTERN_GUIDE: ${{ secrets.MONGO_DB_SUMMER23_INTERN_GUIDE }}
+      VITE_GOOGLE_PM_INTERVIEW_GUIDE: ${{ secrets.GOOGLE_PM_INTERVIEW_GUIDE }}
+      VITE_GUMMADI_PM_RECRUITING_GUIDE: ${{ secrets.GUMMADI_PM_RECRUITING_GUIDE }}
+      VITE_PMCLUB_WORKING_WITH_FIGMA: ${{ secrets.PMCLUB_WORKING_WITH_FIGMA }}
+      VITE_PMCLUB_BEING_PROJECT_MANAGER: ${{ secrets.PMCLUB_BEING_PROJECT_MANAGER }}
+      VITE_PMCLUB_JIRA_CONFLUENCE_TUTORIAL: ${{ secrets.PMCLUB_JIRA_CONFLUENCE_TUTORIAL}}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
