@@ -2,7 +2,7 @@ import {useState} from "react";
 import { auth } from "../../firebase.config";
 import { sendPasswordResetEmail } from "firebase/auth";
 
-export default function sendPasswordReset (email) {
+const sendPasswordReset = (email) => {
     sendPasswordResetEmail(auth, email)
     .then(() => {
         // Password reset email successfully sent
@@ -13,4 +13,6 @@ export default function sendPasswordReset (email) {
         throw(error.code, error.message)
     });
 
-}
+};
+
+export default sendPasswordReset
