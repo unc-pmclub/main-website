@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: 'main-website/V2/',
+  base: '/main-website/V2/dist',
   define: {
     'process.env': process.env
   },
