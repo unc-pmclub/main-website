@@ -45,7 +45,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Create CNAME file
-        run: echo "www.uncpmclub.com" > dist/CNAME
+        run: echo "www.uncpmclub.com" > ./dist/CNAME
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
