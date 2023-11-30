@@ -198,9 +198,12 @@ function PMPortal() {
 
   return (
     <div
-      className="flex flex-col min-h-screen items-center justify-start bg-contain bg-center overflow-hidden"
+      className="flex flex-col min-h-screen items-center justify-start overflow-hidden"
       style={{
         backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: '100% auto',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center bottom'
       }}
     >
       <PortalHeader />
