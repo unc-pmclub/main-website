@@ -1,3 +1,6 @@
+// /uncpm-dev-website prefixes to paths removed
+
+
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -24,7 +27,7 @@ function SignIn() {
   useEffect(() => {
     if (loginAttempted) {
       if (user) {
-        navigate("/uncpm-dev-website/pm-portal");
+        navigate("/pm-portal");
       }
       if (error) {
         displayError(error, setModalInfo);
@@ -40,7 +43,7 @@ function SignIn() {
     try {
       await signInUser(email, password);
       if (user) {
-        navigate("/uncpm-dev-website/pm-portal");
+        navigate("/pm-portal");
       } else if (error) {
         displayError(error, setModalInfo);
       }
@@ -59,7 +62,7 @@ function SignIn() {
     try {
       await signInWithProvider("google", setModalInfo);
       if (user) {
-        navigate("/uncpm-dev-website/pm-portal");
+        navigate("/pm-portal");
       } else if (error) {
         displayError(error, setModalInfo);
       }
@@ -78,7 +81,7 @@ function SignIn() {
     try {
       await signInWithProvider("github", setModalInfo);
       if (user) {
-        navigate("/uncpm-dev-website/pm-portal");
+        navigate("/pm-portal");
       } else if (error) {
         displayError(error, setModalInfo);
       }
@@ -143,7 +146,7 @@ function SignIn() {
                           Password
                         </label>
                         <Link
-                          to="/uncpm-dev-website/reset-password"
+                          to="/reset-password"
                           className="text-sm font-medium text-blue-600 hover:underline"
                         >
                           Having trouble signing in?
@@ -231,7 +234,7 @@ function SignIn() {
                 <div className="text-gray-600 text-center mt-6">
                   Don’t you have an account?{" "}
                   <Link
-                    to="/uncpm-dev-website/signup"
+                    to="/signup"
                     className="text-blue-600 hover:underline transition duration-150 ease-in-out"
                   >
                     Sign up

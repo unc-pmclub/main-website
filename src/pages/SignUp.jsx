@@ -1,3 +1,5 @@
+// /uncpm-dev-website prefixes to paths removed
+
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
@@ -190,7 +192,7 @@ function SignUp() {
                 <div className="text-gray-600 text-center mt-6">
                   Already have an account?{" "}
                   <Link
-                    to="/uncpm-dev-website/signin"
+                    to="/signin"
                     className="text-blue-600 hover:underline transition duration-150 ease-in-out"
                   >
                     Sign in

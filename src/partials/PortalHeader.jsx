@@ -1,9 +1,9 @@
+// /uncpm-dev-website prefixes to paths removed
+
+
 // TODO:
 //  - Fix deprecated pageYOffset usage on line 15
-//  - Fix hamburger in mobile view
-//    - Fixed hamburger
-//    - Drop-down menu / side navigation drawer
-//    - Implement w/o affecting desktop header
+
 
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -31,11 +31,11 @@ function PortalHeader() {
 
     if (
       location.pathname === "/" ||
-      location.pathname === "/uncpm-dev-website/"
+      location.pathname === "/"
     ) {
       window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to top if on homepage
     } else {
-      window.location.href = "/uncpm-dev-website/"; // Navigate to homepage if on other pages
+      window.location.href = "/"; // Navigate to homepage if on other pages
     }
   };
 
@@ -64,7 +64,7 @@ function PortalHeader() {
         <div className="flex-shrink-0 mr-4">
           {/* Logo */}
           <a
-            href="/uncpm-dev-website/"
+            href="/"
             onClick={handleLogoClick}
             className="flex items-center" // <-- Changed to flex and items-center
             aria-label="UNC Product Management"
@@ -105,7 +105,7 @@ function PortalHeader() {
            <div className={`fixed top-0 right-0 z-30 w-60 h-screen bg-white overflow-y-auto transform ${isDrawerOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out md:hidden`}>
             <nav className="flex flex-col mt-10 p-4">
               <Link
-                to="/uncpm-dev-website/"
+                to="/"
                 className="btn-sm text-neutral-50 bg-red-600 hover:bg-red-300 ml-3"
                 onClick={() => signOut(auth)}
               >
@@ -121,7 +121,7 @@ function PortalHeader() {
             <ul className="flex flex-grow flex-wrap justify-end  items-center">
               {/* <li>
                 <Link
-                  to="/uncpm-dev-website/signin"
+                  to="/signin"
                   className="font-medium text-gray-600 hover:text-red-500 px-5 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   Profile
@@ -129,7 +129,7 @@ function PortalHeader() {
               </li> */}
               <li>
                 <Link
-                  to="/uncpm-dev-website/"
+                  to="/"
                   className="btn-sm text-neutral-50 bg-red-600 hover:bg-red-300 ml-3"
                   onClick={() => signOut(auth)}
                 >

@@ -83,7 +83,7 @@ function ResetPassword() {
                     </div>
                   </div>
                   <div className="text-gray-600 hover:underline hover:text-blue-600 text-center mt-6">
-                    <Link to="/uncpm-dev-website/signin">Back to Login</Link>
+                    <Link to="/signin">Back to Login</Link>
                   </div>
                 </form>
               </div>

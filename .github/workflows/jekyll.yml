@@ -55,8 +55,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: dist
-          path: dist/

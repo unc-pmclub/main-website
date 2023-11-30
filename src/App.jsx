@@ -1,3 +1,5 @@
+// /uncpm-dev-website prefixes to paths removed
+
 import React, { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 
@@ -35,14 +37,14 @@ function App() {
   return (
     <>
       <Routes>
-        <Route exact path="/uncpm-dev-website/" element={<Home />} />
-        <Route path="/uncpm-dev-website/signin/" element={<SignIn />} />
-        <Route path="/uncpm-dev-website/signup/" element={<SignUp />} />
+        <Route exact path="/" element={<Home />} />
+        <Route path="/signin/" element={<SignIn />} />
+        <Route path="/signup/" element={<SignUp />} />
         <Route
-          path="/uncpm-dev-website/reset-password/"
+          path="/reset-password/"
           element={<ResetPassword />}
         />
-        <Route path="/uncpm-dev-website/pm-portal/" element={<PMPortal />} />
+        <Route path="/pm-portal/" element={<PMPortal />} />
       </Routes>
     </>
   );

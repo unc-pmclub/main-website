@@ -1,3 +1,5 @@
+// /uncpm-dev-website prefixes to paths removed
+
 // TODO:
 //  - Fix deprecated pageYOffset usage on line 15
 
@@ -19,7 +21,7 @@ function Header() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const announcementMessage = "📢 Members: Create an account and check out the PM Portal! Click 'Apply' or ";
-  const announcementNav = "/uncpm-dev-website/signin";
+  const announcementNav = "/signin";
 
   const modalHeader = "Application Status";
 
@@ -35,11 +37,11 @@ function Header() {
 
     if (
       location.pathname === "/" ||
-      location.pathname === "/uncpm-dev-website/"
+      location.pathname === "/"
     ) {
       window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to top if on homepage
     } else {
-      window.location.href = "/uncpm-dev-website/"; // Navigate to homepage if on other pages
+      window.location.href = "/"; // Navigate to homepage if on other pages
     }
   };
 
@@ -75,7 +77,7 @@ function Header() {
           <div className="flex-shrink-0 mr-4">
             {/* Logo */}
             <a
-              href="/uncpm-dev-website/"
+              href="/"
               onClick={handleLogoClick}
               className="block"
               aria-label="UNC Product Management"
@@ -115,35 +117,35 @@ function Header() {
           <div className={`fixed top-0 right-0 z-30 w-60 h-screen bg-white overflow-y-auto transform ${isDrawerOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out md:hidden`}>
             <nav className="flex flex-col mt-10 p-4">
               <a
-                href="/uncpm-dev-website/#about"
+                href="/#about"
                 onClick={toggleDrawer}
                 className="font-medium text-gray-600 hover:text-red-500 px-5 py-3 flex items-center transition duration-150 ease-in-out"
               >
                 About
               </a>
               <a
-                href="/uncpm-dev-website/#lab"
+                href="/#lab"
                 onClick={toggleDrawer}
                 className="font-medium text-gray-600 hover:text-red-500 px-5 py-3 flex items-center transition duration-150 ease-in-out"
               >
                 Lab
               </a>
               <a
-                href="/uncpm-dev-website/#team"
+                href="/#team"
                 onClick={toggleDrawer}
                 className="font-medium text-gray-600 hover:text-red-500 px-5 py-3 flex items-center transition duration-150 ease-in-out"
               >
                 Team
               </a>
               <a
-                href="/uncpm-dev-website/#subscribe"
+                href="/#subscribe"
                 onClick={toggleDrawer}
                 className="font-medium text-gray-600 hover:text-red-500 px-5 py-3 flex items-center transition duration-150 ease-in-out"
               >
                 Subscribe
               </a>
               <Link
-                to="/uncpm-dev-website/signin"
+                to="/signin"
                 onClick={toggleDrawer}
                 className="font-medium text-gray-600 hover:text-red-500 px-5 py-3 flex items-center transition duration-150 ease-in-out"
               >
@@ -176,7 +178,7 @@ function Header() {
             <ul className="flex flex-grow flex-wrap justify-end  items-center">
               <li>
                 <a
-                  href="/uncpm-dev-website/#about"
+                  href="/#about"
                   className="font-medium text-gray-600 hover:text-red-500 px-5 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   About
@@ -184,7 +186,7 @@ function Header() {
               </li>
               <li>
                 <a
-                  href="/uncpm-dev-website/#lab"
+                  href="/#lab"
                   className="font-medium text-gray-600 hover:text-red-500 px-5 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   Lab
@@ -192,7 +194,7 @@ function Header() {
               </li>
               <li>
                 <a
-                  href="/uncpm-dev-website/#team"
+                  href="/#team"
                   className="font-medium text-gray-600 hover:text-red-500 px-5 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   Team
@@ -200,7 +202,7 @@ function Header() {
               </li>
               <li>
                 <a
-                  href="/uncpm-dev-website/#subscribe"
+                  href="/#subscribe"
                   className="font-medium text-gray-600 hover:text-red-500 px-5 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   Subscribe
@@ -208,7 +210,7 @@ function Header() {
               </li>
               <li>
                 <Link
-                  to="/uncpm-dev-website/signin"
+                  to="/signin"
                   className="font-medium text-gray-600 hover:text-red-500 px-5 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   Login
