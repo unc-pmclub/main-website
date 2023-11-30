@@ -11,6 +11,9 @@ export default defineConfig({
   css: {
     postcss,
   },
+  optimizeDeps: {
+    include: ['@mui/material']
+  },
   plugins: [react()],
   resolve: {
     alias: [
