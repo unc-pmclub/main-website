@@ -1,4 +1,4 @@
-import {useState} from "react";
+import "react";
 import { auth } from "../../firebase.config";
 import { sendPasswordResetEmail } from "firebase/auth";
 
