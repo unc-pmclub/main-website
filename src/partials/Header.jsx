@@ -14,14 +14,14 @@ import CloseIcon from "@mui/icons-material/Close";
 function Header() {
   const [top, setTop] = useState(true);
   // Remember to assign a link to application
-  const [application, setApplication] = useState(null);
+  const [application, setApplication] = useState('https://forms.gle/KLRqcHYWgsbxMUmJ9'); // change to useState(null); for when application is closed
   const [modalOpen, setModalOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const announcementMessage = "📢 Members: Create an account and check out the PM Portal! Click 'Apply' or ";
-  const announcementNav = "/signin";
+  const announcementNav = application;
 
   const modalHeader = "Application Status";
 

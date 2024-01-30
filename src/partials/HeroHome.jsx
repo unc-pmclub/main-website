@@ -8,7 +8,7 @@ import HeroImage from "../images/product-management-marketing-books.jpg";
 function HeroHome() {
   // const [videoModalOpen, setVideoModalOpen] = useState(false);
   // Remember to assign a link to application
-  const [application, setApplication] = useState(null);
+  const [application, setApplication] = useState('https://forms.gle/KLRqcHYWgsbxMUmJ9');
   const [modalOpen, setModalOpen] = useState(false);
 
   const modalHeader = <div>Application Status:</div>;
