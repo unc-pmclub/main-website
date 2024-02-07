@@ -10,7 +10,8 @@ import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  // apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  apiKey: "AIzaSyD1vnozvmxi3GdbEGyNkXXpuedGu5fhoK8",
   authDomain: "pmclub-website.firebaseapp.com",
   databaseURL: "https://pmclub-website.firebaseio.com",
   projectId: "pmclub-website",
