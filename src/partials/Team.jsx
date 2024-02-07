@@ -4,7 +4,7 @@ import Team1 from '../images/Headshots/17.jpg';
 import Team2 from '../images/Headshots/16.jpg';
 import Team3 from '../images/Headshots/18.jpg';
 import Team4 from '../images/Headshots/19.jpg';
-import Team5 from '../images/Headshots/20.jpg';
+import Team5 from '../images/Headshots/profilephto.jpeg';
 
 
 function Team() {
@@ -65,18 +65,18 @@ function Team() {
                         </a>
                     </div>
                 </div>
-                {/* <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+                <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
                     <div class="mb-8">
                         <img class="object-center object-cover rounded-full h-36 w-36" src={Team5} alt="photo"/>
                     </div>
                     <div class="text-center">
-                        <p class="text-xl text-gray-700 font-bold mb-2">Ryan Richardson</p>
-                        <p class="text-base text-gray-400 font-normal mb-2">VP of Events</p>
+                        <p class="text-xl text-gray-700 font-bold mb-2">Jennifer Lee</p>
+                        <p class="text-base text-gray-400 font-normal mb-2">Website Manager</p>
                         <a href="https://www.linkedin.com/in/ryan-s-richardson/">
                             <i class="fa-brands fa-linkedin fa-2x text-gray-900 hover:text-red-500 duration-500"></i>
                         </a>
                     </div>
-                </div> */}
+                </div>
             </div>
         </div>
     </section>
