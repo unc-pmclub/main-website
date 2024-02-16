@@ -2,4 +2,4 @@ _site
 .sass-cache
 .jekyll-metadata
 node_modules
-# firebase.config.js
+firebase.config.js
