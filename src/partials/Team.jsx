@@ -4,9 +4,10 @@ import Team1 from '../images/Headshots/22.png';
 import Team2 from '../images/Headshots/21.jpg';
 import Team3 from '../images/Headshots/18.jpg';
 import Team4 from '../images/Headshots/19.jpg';
-import Team5 from '../images/Headshots/23.jpeg';
+import Team5 from '../images/Headshots/23.jpg';
 import Team6 from '../images/Headshots/24.jpg';
 import Team7 from '../images/Headshots/25.jpg';
+import Team8 from '../images/Headshots/26.jpeg';
 
 
 function Team() {
@@ -111,6 +112,18 @@ function Team() {
                         <p class="text-xl text-gray-700 font-bold mb-2">Arya Salian</p>
                         <p class="text-base text-gray-400 font-normal mb-2">Technical Leader</p>
                         <a href="https://www.linkedin.com/in/arya-salian-462a9421b/">
+                            <i class="fa-brands fa-linkedin fa-2x text-gray-900 hover:text-red-500 duration-500"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+                    <div class="mb-8">
+                        <img class="object-center object-cover rounded-full h-36 w-36" src={Team8} alt="photo"/>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-xl text-gray-700 font-bold mb-2">Keegan Burr</p>
+                        <p class="text-base text-gray-400 font-normal mb-2">VP External Relations</p>
+                        <a href="https://www.linkedin.com/in/keegan-burr">
                             <i class="fa-brands fa-linkedin fa-2x text-gray-900 hover:text-red-500 duration-500"></i>
                         </a>
                     </div>
